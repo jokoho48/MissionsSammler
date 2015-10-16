@@ -1,0 +1,7539 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"aia_takistan_config",
+		"a3_characters_f",
+		"A3_Characters_F_BLUFOR",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"rhs_c_a2port_car",
+		"CABuildings",
+		"aia_buildings_config",
+		"lop_faction_am",
+		"lop_faction_tka",
+		"rhs_c_rva",
+		"rhs_c_a2port_air",
+		"rhs_c_a2port_armor",
+		"rhs_c_bmd",
+		"rhs_c_bmp",
+		"ace_medical"
+	};
+	addOnsAuto[]=
+	{
+		"ace_medical",
+		"lop_faction_tka",
+		"lop_faction_am",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"rhs_c_a2port_car",
+		"rhs_c_rva",
+		"rhs_c_a2port_air",
+		"rhs_c_a2port_armor",
+		"rhs_c_bmd",
+		"rhs_c_bmp",
+		"aia_takistan_config"
+	};
+	randomSeed=4134967;
+	class Intel
+	{
+		resistanceWest=0;
+		resistanceEast=1;
+		startWeather=0.39999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.39999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=140;
+		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7998.4038,296.35501,1952.3125};
+					class args
+					{
+						items=13;
+						class Item0
+						{
+							value="0";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="enableFor";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="enableAdvancedWounds";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="enableVehicleCrashes";
+						};
+						class Item3
+						{
+							value="2";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="medicSetting_PAK";
+						};
+						class Item4
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="consumeItem_PAK";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="useCondition_PAK";
+						};
+						class Item6
+						{
+							value="3";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="useLocation_PAK";
+						};
+						class Item7
+						{
+							value="2";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="medicSetting_SurgicalKit";
+						};
+						class Item8
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="consumeItem_SurgicalKit";
+						};
+						class Item9
+						{
+							value="3";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="useLocation_SurgicalKit";
+						};
+						class Item10
+						{
+							value="0";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="useCondition_SurgicalKit";
+						};
+						class Item11
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="healHitPointAfterAdvBandage";
+						};
+						class Item12
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="painIsOnlySuppressed";
+						};
+					};
+					id=0;
+					side="LOGIC";
+					vehicle="ACE_moduleAdvancedMedicalSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5053.9448,173.32755,6172.2583};
+					id=1;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""FORTIFY""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5056.9448,170.92285,6167.2583};
+					id=2;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5058.9448,170.48109,6167.2583};
+					id=3;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5060.9448,170.18349,6167.2583};
+					id=4;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5062.9448,169.83252,6167.2583};
+					id=5;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5064.9448,169.29794,6167.2583};
+					id=6;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5066.9448,168.76674,6167.2583};
+					id=7;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5068.9448,168.2459,6167.2583};
+					id=8;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5070.9448,167.87762,6167.2583};
+					id=9;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item2
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5089.9365,168.27631,6168.8379};
+					id=10;
+					side="EAST";
+					vehicle="LOP_TKA_BMP1";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item3
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5079.2046,167.90848,6168.8945};
+					id=11;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item4
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5106.0479,153.76152,6142.8271};
+					id=12;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""FORTIFY""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5109.0479,151.06155,6137.8271};
+					id=13;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5111.0479,151.15115,6137.8271};
+					id=14;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5113.0479,151.27345,6137.8271};
+					id=15;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5115.0479,151.42706,6137.8271};
+					id=16;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5117.0479,151.58066,6137.8271};
+					id=17;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5119.0479,151.66231,6137.8271};
+					id=18;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5121.0479,151.54713,6137.8271};
+					id=19;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5123.0479,151.43193,6137.8271};
+					id=20;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item5
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5142.0396,149.01595,6139.4067};
+					id=21;
+					side="EAST";
+					vehicle="LOP_TKA_BMP1";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item6
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5131.3076,150.97835,6139.4634};
+					id=22;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item7
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5073.8052,148.8148,6123.4648};
+					id=23;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+				class Item1
+				{
+					position[]={5076.8052,148.25603,6118.4648};
+					id=24;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5078.8052,148.26883,6118.4648};
+					id=25;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5080.8052,148.28163,6118.4648};
+					id=26;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5082.8052,148.30643,6118.4648};
+					id=27;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5084.8052,148.33522,6118.4648};
+					id=28;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5086.8052,148.36401,6118.4648};
+					id=29;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5088.8052,148.38075,6118.4648};
+					id=30;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5090.8052,148.39035,6118.4648};
+					id=31;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item8
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5099.0649,148.41116,6120.1011};
+					id=32;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item9
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5048.7852,153.07828,6133.0171};
+					id=33;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""4"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+				class Item1
+				{
+					position[]={5051.7852,150.77676,6128.0171};
+					id=34;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5053.7852,150.73494,6128.0171};
+					id=35;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5055.7852,150.70934,6128.0171};
+					id=36;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5057.7852,150.60759,6128.0171};
+					id=37;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5059.7852,150.48087,6128.0171};
+					id=38;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5061.7852,150.34326,6128.0171};
+					id=39;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5063.7852,150.22623,6128.0171};
+					id=40;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5065.7852,150.11954,6128.0171};
+					id=41;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item10
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3566.0757,236.06187,4315.271};
+					id=42;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""10"", ""FORTIFY""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3569.0757,235.59641,4310.271};
+					id=43;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3571.0757,235.5979,4310.271};
+					id=44;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={3573.0757,235.5659,4310.271};
+					id=45;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={3575.0757,235.53548,4310.271};
+					id=46;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3577.0757,235.54507,4310.271};
+					id=47;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3579.0757,235.54875,4310.271};
+					id=48;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3581.0757,235.55196,4310.271};
+					id=49;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3583.0757,235.57561,4310.271};
+					id=50;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item11
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3602.0671,235.63455,4311.8506};
+					id=51;
+					side="EAST";
+					vehicle="LOP_TKA_BMP1";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""10"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item12
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3591.3352,235.66096,4311.9072};
+					id=52;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""10"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item13
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5956.875,280.71762,5853.1494};
+					id=53;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""3"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+				class Item1
+				{
+					position[]={5959.875,281.2449,5848.1494};
+					id=54;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5961.875,281.54248,5848.1494};
+					id=55;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5963.875,281.82471,5848.1494};
+					id=56;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5965.875,282.10965,5848.1494};
+					id=57;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5967.875,282.39767,5848.1494};
+					id=58;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5969.875,282.67307,5848.1494};
+					id=59;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5971.875,282.94479,5848.1494};
+					id=60;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5973.875,283.22,5848.1494};
+					id=61;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item14
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5992.8667,285.57639,5849.729};
+					id=62;
+					side="EAST";
+					vehicle="LOP_TKA_BMP1";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""3"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item15
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5982.1343,284.29092,5849.7856};
+					id=63;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""3"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item16
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5924.2988,120.88419,7461.9971};
+					id=64;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={5927.2988,121.15914,7456.9971};
+					id=65;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5929.2988,121.18154,7456.9971};
+					id=66;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5931.2988,121.18903,7456.9971};
+					id=67;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5933.2988,121.23703,7456.9971};
+					id=68;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5935.2988,121.28503,7456.9971};
+					id=69;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5937.2988,121.32953,7456.9971};
+					id=70;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5939.2988,121.34171,7456.9971};
+					id=71;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5941.2988,121.35131,7456.9971};
+					id=72;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item17
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5945.1763,123.29352,7432.4873};
+					id=73;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item18
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5951.4873,121.10529,7459.5596};
+					id=74;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item19
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8887.54,270.68671,5352.8271};
+					azimut=-48.419498;
+					id=75;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""1"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8893.2705,270.03918,5351.7529};
+					azimut=-48.419544;
+					id=76;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8894.5986,270.06647,5353.251};
+					azimut=-48.419544;
+					id=77;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8895.9268,270.09567,5354.7451};
+					azimut=-48.419544;
+					id=78;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8897.2529,270.12537,5356.2422};
+					azimut=-48.419544;
+					id=79;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8898.5801,270.14932,5357.7383};
+					azimut=-48.419544;
+					id=80;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8899.9063,270.14236,5359.2324};
+					azimut=-48.419544;
+					id=81;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8901.2344,270.12552,5360.7295};
+					azimut=-48.419544;
+					id=82;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8902.5615,269.90683,5362.2256};
+					azimut=-48.419544;
+					id=83;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item20
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8923.4697,265.13702,5348.8589};
+					azimut=-48.419498;
+					id=84;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""1"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item21
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8911.7705,266.71072,5339.0908};
+					azimut=-48.419498;
+					id=85;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""1"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item22
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8894.2568,269.18735,5343.832};
+					azimut=-48.419498;
+					id=86;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""1"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8899.9873,268.61786,5342.7578};
+					azimut=-48.419544;
+					id=87;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8901.3154,268.65427,5344.2559};
+					azimut=-48.419544;
+					id=88;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8902.6436,268.67288,5345.75};
+					azimut=-48.419544;
+					id=89;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8903.9697,268.64517,5347.2471};
+					azimut=-48.419544;
+					id=90;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8905.2969,268.55563,5348.7432};
+					azimut=-48.419544;
+					id=91;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8906.623,268.46689,5350.2373};
+					azimut=-48.419544;
+					id=92;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8907.9512,268.42215,5351.7344};
+					azimut=-48.419544;
+					id=93;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8909.2783,268.37665,5353.2305};
+					azimut=-48.419544;
+					id=94;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item23
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8976.1523,202.54482,6881.8032};
+					azimut=-48.419498;
+					id=95;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""19"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8981.8828,202.61839,6880.729};
+					azimut=-48.419544;
+					id=96;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8983.2109,202.63255,6882.2271};
+					azimut=-48.419544;
+					id=97;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8984.5391,202.63841,6883.7212};
+					azimut=-48.419544;
+					id=98;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8985.8652,202.63301,6885.2183};
+					azimut=-48.419544;
+					id=99;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8987.1924,202.62531,6886.7144};
+					azimut=-48.419544;
+					id=100;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8988.5186,202.5629,6888.2085};
+					azimut=-48.419544;
+					id=101;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8989.8467,202.4765,6889.7056};
+					azimut=-48.419544;
+					id=102;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8991.1738,202.38298,6891.2017};
+					azimut=-48.419544;
+					id=103;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item24
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9020.1807,203.00835,6853.5186};
+					azimut=-48.419498;
+					id=104;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""19"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item25
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9004.8818,202.23755,6872.3896};
+					azimut=-48.419498;
+					id=105;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""19"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item26
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8982.8691,202.56779,6872.8081};
+					azimut=-48.419498;
+					id=106;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""19"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8988.5996,202.5533,6871.7339};
+					azimut=-48.419544;
+					id=107;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8989.9277,202.55043,6873.2319};
+					azimut=-48.419544;
+					id=108;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8991.2559,202.5406,6874.7261};
+					azimut=-48.419544;
+					id=109;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8992.582,202.53973,6876.2231};
+					azimut=-48.419544;
+					id=110;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8993.9092,202.49672,6877.7192};
+					azimut=-48.419544;
+					id=111;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8995.2354,202.45374,6879.2134};
+					azimut=-48.419544;
+					id=112;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8996.5635,202.3707,6880.7104};
+					azimut=-48.419544;
+					id=113;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8997.8906,202.27798,6882.2065};
+					azimut=-48.419544;
+					id=114;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item27
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8163.9854,168.11763,7826.519};
+					azimut=-64.865303;
+					id=115;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""9"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8169.7861,168.50606,7827.1113};
+					azimut=-64.865379;
+					id=116;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8170.6353,168.45648,7828.9229};
+					azimut=-64.865379;
+					id=117;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8171.4863,168.41434,7830.7324};
+					azimut=-64.865379;
+					id=118;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8172.3359,168.37535,7832.5449};
+					azimut=-64.865379;
+					id=119;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8173.1831,168.34341,7834.353};
+					azimut=-64.865379;
+					id=120;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8174.0313,168.31807,7836.1626};
+					azimut=-64.865379;
+					id=121;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8174.8828,168.29559,7837.9741};
+					azimut=-64.865379;
+					id=122;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8175.7319,168.29166,7839.7837};
+					azimut=-64.865379;
+					id=123;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item28
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8214.2207,174.35077,7811.8564};
+					azimut=-64.865303;
+					id=124;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""9"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item29
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8194.208,171.04532,7825.623};
+					azimut=-64.865303;
+					id=125;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""9"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item30
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8172.9746,169.25783,7819.7925};
+					azimut=-64.865303;
+					id=126;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""9"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8178.7754,169.71228,7820.3857};
+					azimut=-64.865379;
+					id=127;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8179.6245,169.67403,7822.1973};
+					azimut=-64.865379;
+					id=128;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8180.4751,169.64009,7824.0063};
+					azimut=-64.865379;
+					id=129;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8181.3242,169.61078,7825.8169};
+					azimut=-64.865379;
+					id=130;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8182.1733,169.59605,7827.6289};
+					azimut=-64.865379;
+					id=131;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8183.0215,169.58153,7829.437};
+					azimut=-64.865379;
+					id=132;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8183.8706,169.57939,7831.2485};
+					azimut=-64.865379;
+					id=133;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8184.7222,169.58067,7833.0601};
+					azimut=-64.865379;
+					id=134;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item31
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5793.1211,93.446259,8956.2344};
+					azimut=-108.069;
+					id=135;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""6"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5796.9443,94.108063,8960.6377};
+					azimut=-108.06918;
+					id=136;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5796.3237,94.028374,8962.5391};
+					azimut=-108.06918;
+					id=137;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5795.7051,93.963867,8964.4424};
+					azimut=-108.06918;
+					id=138;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5795.0835,93.898834,8966.3438};
+					azimut=-108.06918;
+					id=139;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5794.4629,93.833542,8968.2383};
+					azimut=-108.06918;
+					id=140;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5793.8408,93.7799,8970.1436};
+					azimut=-108.06918;
+					id=141;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5793.2217,93.726402,8972.0439};
+					azimut=-108.06918;
+					id=142;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5792.604,93.67231,8973.9453};
+					azimut=-108.06918;
+					id=143;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item32
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5839.7754,99.182709,8979.9375};
+					azimut=-108.069;
+					id=144;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""6"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item33
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5815.7642,96.955627,8976.2715};
+					azimut=-108.069;
+					id=145;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""6"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item34
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5804.2798,95.205521,8957.4854};
+					azimut=-108.069;
+					id=146;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""6"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5808.1001,95.794609,8961.8906};
+					azimut=-108.06918;
+					id=147;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5807.478,95.729515,8963.791};
+					azimut=-108.06918;
+					id=148;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5806.8594,95.670769,8965.6924};
+					azimut=-108.06918;
+					id=149;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5806.2402,95.611816,8967.5889};
+					azimut=-108.06918;
+					id=150;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5805.6196,95.554306,8969.4941};
+					azimut=-108.06918;
+					id=151;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5804.9985,95.500328,8971.3955};
+					azimut=-108.06918;
+					id=152;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5804.3779,95.446335,8973.293};
+					azimut=-108.06918;
+					id=153;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5803.7573,95.395393,8975.2002};
+					azimut=-108.06918;
+					id=154;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item35
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3031.0977,91.107689,10113.621};
+					azimut=-14.5174;
+					id=155;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""17"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3035.2542,91.021194,10109.533};
+					azimut=-14.517108;
+					id=156;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3037.1899,91.180504,10110.032};
+					azimut=-14.517108;
+					id=157;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3039.1304,91.227776,10110.529};
+					azimut=-14.517108;
+					id=158;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3041.0649,91.237785,10111.036};
+					azimut=-14.517108;
+					id=159;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3042.9919,91.244591,10111.535};
+					azimut=-14.517108;
+					id=160;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3044.9351,91.246651,10112.04};
+					azimut=-14.517108;
+					id=161;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3046.8713,91.244186,10112.543};
+					azimut=-14.517108;
+					id=162;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3048.8054,91.248756,10113.042};
+					azimut=-14.517108;
+					id=163;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item36
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3051.8657,85.752411,10065.59};
+					azimut=-14.5174;
+					id=164;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""17"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item37
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3049.6907,89.008911,10089.783};
+					azimut=-14.5174;
+					id=165;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""17"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item38
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3031.6538,89.420288,10102.407};
+					azimut=-14.5174;
+					id=166;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""17"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3035.8176,89.662163,10098.322};
+					azimut=-14.517108;
+					id=167;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3037.7478,90.066772,10098.822};
+					azimut=-14.517108;
+					id=168;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3039.6858,90.142601,10099.324};
+					azimut=-14.517108;
+					id=169;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3041.6172,90.207901,10099.825};
+					azimut=-14.517108;
+					id=170;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3043.5564,90.271049,10100.326};
+					azimut=-14.517108;
+					id=171;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3045.491,90.27504,10100.826};
+					azimut=-14.517108;
+					id=172;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3047.4277,90.276833,10101.331};
+					azimut=-14.517108;
+					id=173;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3049.3645,90.280212,10101.831};
+					azimut=-14.517108;
+					id=174;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item39
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3547.1902,157.82942,8440.3916};
+					azimut=5.35147;
+					id=175;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3549.7087,157.84293,8435.1318};
+					azimut=5.3517585;
+					id=176;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3551.6997,157.81186,8434.9453};
+					azimut=5.3517585;
+					id=177;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3553.6931,157.77002,8434.7539};
+					azimut=5.3517585;
+					id=178;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3555.6843,157.71564,8434.5703};
+					azimut=5.3517585;
+					id=179;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3557.667,157.68193,8434.3877};
+					azimut=5.3517585;
+					id=180;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3559.666,157.65582,8434.2012};
+					azimut=5.3517585;
+					id=181;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3561.6582,157.62436,8434.0166};
+					azimut=5.3517585;
+					id=182;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3563.647,157.5986,8433.8281};
+					azimut=5.3517585;
+					id=183;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item40
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3523.2698,160.83464,8385.457};
+					azimut=5.35147;
+					id=184;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item41
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3538.2839,159.78304,8398.0146};
+					azimut=5.35147;
+					id=185;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item42
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3543.9016,158.07405,8429.6533};
+					azimut=5.35147;
+					id=186;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3546.429,158.20079,8424.3975};
+					azimut=5.3517585;
+					id=187;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3548.4141,158.18311,8424.2119};
+					azimut=5.3517585;
+					id=188;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3550.4077,158.1633,8424.0273};
+					azimut=5.3517585;
+					id=189;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3552.3933,158.13815,8423.8389};
+					azimut=5.3517585;
+					id=190;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3554.3877,158.11372,8423.6523};
+					azimut=5.3517585;
+					id=191;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3556.3782,158.0901,8423.4668};
+					azimut=5.3517585;
+					id=192;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3558.3706,158.07785,8423.2793};
+					azimut=5.3517585;
+					id=193;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3560.3621,158.06317,8423.0957};
+					azimut=5.3517585;
+					id=194;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item43
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={2318.3062,244.76199,7745.3315};
+					azimut=-105.947;
+					id=195;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""13"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={2322.2917,244.21851,7749.5889};
+					azimut=-105.94647;
+					id=196;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={2321.7419,244.22491,7751.5127};
+					azimut=-105.94647;
+					id=197;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={2321.1965,244.23146,7753.438};
+					azimut=-105.94647;
+					id=198;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={2320.6445,244.23877,7755.3604};
+					azimut=-105.94647;
+					id=199;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={2320.0952,244.25587,7757.2729};
+					azimut=-105.94647;
+					id=200;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={2319.542,244.28163,7759.2041};
+					azimut=-105.94647;
+					id=201;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={2318.9895,244.30746,7761.127};
+					azimut=-105.94647;
+					id=202;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={2318.4431,244.3335,7763.0479};
+					azimut=-105.94647;
+					id=203;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item44
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2365.8049,238.22842,7767.2905};
+					azimut=-105.947;
+					id=204;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""13"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item45
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2341.6741,241.63338,7764.5156};
+					azimut=-105.947;
+					id=205;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""13"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item46
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={2329.5051,243.51524,7746.168};
+					azimut=-105.947;
+					id=206;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""13"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={2333.4846,242.93576,7750.4312};
+					azimut=-105.94647;
+					id=207;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={2332.9348,242.95792,7752.3496};
+					azimut=-105.94647;
+					id=208;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={2332.3835,242.9801,7754.272};
+					azimut=-105.94647;
+					id=209;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={2331.8384,243.00079,7756.1914};
+					azimut=-105.94647;
+					id=210;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={2331.2878,243.03261,7758.1177};
+					azimut=-105.94647;
+					id=211;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={2330.7378,243.06233,7760.0396};
+					azimut=-105.94647;
+					id=212;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={2330.1887,243.09172,7761.9629};
+					azimut=-105.94647;
+					id=213;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={2329.636,243.13484,7763.8867};
+					azimut=-105.94647;
+					id=214;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item47
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1385.6261,243.66655,5802.8066};
+					azimut=-63.244202;
+					id=215;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""15"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={1391.4425,243.21634,5803.2329};
+					azimut=-63.243633;
+					id=216;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={1392.3427,243.25578,5805.019};
+					azimut=-63.243633;
+					id=217;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={1393.2488,243.29301,5806.8047};
+					azimut=-63.243633;
+					id=218;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={1394.1459,243.33066,5808.5913};
+					azimut=-63.243633;
+					id=219;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={1395.0393,243.3674,5810.3706};
+					azimut=-63.243633;
+					id=220;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={1395.9425,243.40707,5812.1631};
+					azimut=-63.243633;
+					id=221;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={1396.8408,243.44136,5813.9526};
+					azimut=-63.243633;
+					id=222;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={1397.7424,243.47629,5815.7324};
+					azimut=-63.243633;
+					id=223;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item48
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1435.2533,239.15327,5786.2998};
+					azimut=-63.244202;
+					id=224;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""15"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item49
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1415.8098,241.22153,5801.0557};
+					azimut=-63.244202;
+					id=225;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""15"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item50
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1394.4235,242.52795,5795.8262};
+					azimut=-63.244202;
+					id=226;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""15"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={1400.2393,242.08348,5796.2603};
+					azimut=-63.243633;
+					id=227;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={1401.1365,242.12006,5798.0425};
+					azimut=-63.243633;
+					id=228;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={1402.0348,242.15981,5799.8291};
+					azimut=-63.243633;
+					id=229;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={1402.9365,242.20016,5801.6089};
+					azimut=-63.243633;
+					id=230;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={1403.8381,242.24277,5803.3989};
+					azimut=-63.243633;
+					id=231;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={1404.7371,242.28804,5805.1851};
+					azimut=-63.243633;
+					id=232;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={1405.6378,242.33226,5806.9697};
+					azimut=-63.243633;
+					id=233;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={1406.5365,242.38388,5808.7578};
+					azimut=-63.243633;
+					id=234;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item51
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1799.5974,210.87259,3774.4856};
+					azimut=-137.217;
+					id=235;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={1800.793,211.12721,3780.1919};
+					azimut=-137.21687;
+					id=236;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={1799.325,211.2202,3781.5522};
+					azimut=-137.21687;
+					id=237;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={1797.859,211.28107,3782.9155};
+					azimut=-137.21687;
+					id=238;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={1796.3894,211.34183,3784.2705};
+					azimut=-137.21687;
+					id=239;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={1794.9255,211.40234,3785.6208};
+					azimut=-137.21687;
+					id=240;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={1793.4532,211.45621,3786.9844};
+					azimut=-137.21687;
+					id=241;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={1791.98,211.4615,3788.3413};
+					azimut=-137.21687;
+					id=242;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={1790.5188,211.4545,3789.699};
+					azimut=-137.21687;
+					id=243;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item52
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1829.1641,211.55843,3817.6267};
+					azimut=-137.217;
+					id=244;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item53
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1809.6134,211.52704,3803.0127};
+					azimut=-137.217;
+					id=245;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item54
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1808.7352,210.95258,3781.0139};
+					azimut=-137.217;
+					id=246;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={1809.924,211.15364,3786.7234};
+					azimut=-137.21687;
+					id=247;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={1808.4578,211.2401,3788.0771};
+					azimut=-137.21687;
+					id=248;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={1806.989,211.31679,3789.4343};
+					azimut=-137.21687;
+					id=249;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={1805.5275,211.38177,3790.793};
+					azimut=-137.21687;
+					id=250;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={1804.0554,211.43509,3792.1533};
+					azimut=-137.21687;
+					id=251;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={1802.588,211.48827,3793.5105};
+					azimut=-137.21687;
+					id=252;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={1801.1211,211.5182,3794.8689};
+					azimut=-137.21687;
+					id=253;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={1799.6506,211.53702,3796.2258};
+					azimut=-137.21687;
+					id=254;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item55
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1792.6296,210.87558,3770.9976};
+					azimut=-137.217;
+					id=255;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""14"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={1793.8252,211.14313,3776.7039};
+					azimut=-137.21687;
+					id=256;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={1792.3572,211.21103,3778.0642};
+					azimut=-137.21687;
+					id=257;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={1790.8912,211.27745,3779.4275};
+					azimut=-137.21687;
+					id=258;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={1789.4216,211.3436,3780.7825};
+					azimut=-137.21687;
+					id=259;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={1787.9578,211.38408,3782.1328};
+					azimut=-137.21687;
+					id=260;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={1786.4855,211.38696,3783.4963};
+					azimut=-137.21687;
+					id=261;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={1785.0122,211.37877,3784.8533};
+					azimut=-137.21687;
+					id=262;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={1783.551,211.37076,3786.2109};
+					azimut=-137.21687;
+					id=263;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item56
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={861.65057,233.51169,3111.291};
+					azimut=-302.32501;
+					id=264;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""12"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={859.02863,233.74927,3106.0828};
+					azimut=-302.32492;
+					id=265;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={860.09741,233.73926,3104.3916};
+					azimut=-302.32492;
+					id=266;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={861.16412,233.72943,3102.6973};
+					azimut=-302.32492;
+					id=267;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={862.23639,233.71919,3101.0095};
+					azimut=-302.32492;
+					id=268;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={863.30389,233.72662,3099.3279};
+					azimut=-302.32492;
+					id=269;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={864.37604,233.74179,3097.6326};
+					azimut=-302.32492;
+					id=270;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={865.45117,233.75656,3095.9421};
+					azimut=-302.32492;
+					id=271;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={866.51465,233.77153,3094.2551};
+					azimut=-302.32492;
+					id=272;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item57
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={909.14758,233.32034,3134.7715};
+					azimut=-137.217;
+					id=273;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""12"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item58
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={889.59692,233.28336,3120.1575};
+					azimut=-137.217;
+					id=274;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""12"", ""MOVE""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item59
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={888.71875,233.131,3098.1587};
+					azimut=-137.217;
+					id=275;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""12"", ""FORTIFY""], false];(group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={889.90747,233.02438,3103.8682};
+					azimut=-137.21687;
+					id=276;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={888.44128,233.03508,3105.2219};
+					azimut=-137.21687;
+					id=277;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={886.97253,233.04822,3106.5791};
+					azimut=-137.21687;
+					id=278;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={885.51099,233.0696,3107.9377};
+					azimut=-137.21687;
+					id=279;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={884.03894,233.09116,3109.2981};
+					azimut=-137.21687;
+					id=280;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={882.57153,233.11266,3110.6553};
+					azimut=-137.21687;
+					id=281;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={881.10461,233.13412,3112.0137};
+					azimut=-137.21687;
+					id=282;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={879.63416,233.19884,3113.3706};
+					azimut=-137.21687;
+					id=283;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item60
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3567.3496,235.19299,4301.2446};
+					id=284;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""10"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+				class Item1
+				{
+					position[]={3570.3496,235.05319,4296.2446};
+					id=285;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3572.3496,235.0724,4296.2446};
+					id=286;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={3574.3496,235.08569,4296.2446};
+					id=287;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={3576.3496,235.0985,4296.2446};
+					id=288;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3578.3496,235.1113,4296.2446};
+					id=289;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3580.3496,235.1292,4296.2446};
+					id=290;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3582.3496,235.14313,4296.2446};
+					id=291;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3584.3496,235.15273,4296.2446};
+					id=292;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item61
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5943.4727,278.25415,5867.8789};
+					id=293;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""3"", ""FORTIFY""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5946.4727,278.83487,5862.8789};
+					id=294;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5948.4727,279.19327,5862.8789};
+					id=295;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5950.4727,279.55502,5862.8789};
+					id=296;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5952.4727,279.90701,5862.8789};
+					id=297;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5954.4727,280.25897,5862.8789};
+					id=298;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5956.4727,280.61249,5862.8789};
+					id=299;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5958.4727,280.94528,5862.8789};
+					id=300;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5960.4727,281.27808,5862.8789};
+					id=301;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item62
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={4468.9873,113.71437,9584.5967};
+					id=302;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""16"", ""FORTIFY""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={4471.9873,114.27325,9579.5967};
+					id=303;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={4473.9873,114.38846,9579.5967};
+					id=304;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={4475.9873,114.46101,9579.5967};
+					id=305;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={4477.9873,114.56664,9579.5967};
+					id=306;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={4479.9873,114.71065,9579.5967};
+					id=307;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={4481.9873,114.8228,9579.5967};
+					id=308;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={4483.9873,114.9116,9579.5967};
+					id=309;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={4485.9873,115.0268,9579.5967};
+					id=310;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item63
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4504.9785,114.87878,9581.1758};
+					id=311;
+					side="EAST";
+					vehicle="LOP_TKA_BMP1";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""16"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item64
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4494.2471,115.07618,9581.2324};
+					id=312;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""16"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item65
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={4470.2612,116.26306,9570.5703};
+					id=313;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""16"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+				class Item1
+				{
+					position[]={4473.2612,117.4798,9565.5703};
+					id=314;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={4475.2612,117.46152,9565.5703};
+					id=315;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={4477.2612,117.21516,9565.5703};
+					id=316;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={4479.2612,117.05178,9565.5703};
+					id=317;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={4481.2612,116.96139,9565.5703};
+					id=318;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={4483.2612,117.30379,9565.5703};
+					id=319;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={4485.2612,117.53448,9565.5703};
+					id=320;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={4487.2612,117.60809,9565.5703};
+					id=321;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item66
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3810.1387,78.993713,11008.844};
+					id=322;
+					side="EAST";
+					vehicle="LOP_TKA_BMP1";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""18"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item67
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3799.4072,79.53656,11008.9};
+					id=323;
+					side="EAST";
+					vehicle="LOP_TKA_BTR60";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""18"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+			};
+		};
+		class Item68
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3775.4214,80.330124,10998.238};
+					id=324;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""18"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];  ";
+				};
+				class Item1
+				{
+					position[]={3778.4214,80.315643,10993.238};
+					id=325;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3780.4214,80.302849,10993.238};
+					id=326;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Corpsman";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={3782.4214,80.260887,10993.238};
+					id=327;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={3784.4214,80.196884,10993.238};
+					id=328;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3786.4214,80.132881,10993.238};
+					id=329;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_GL";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3788.4214,80.055611,10993.238};
+					id=330;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3790.4214,79.962807,10993.238};
+					id=331;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3792.4214,79.87001,10993.238};
+					id=332;
+					side="EAST";
+					vehicle="LOP_TKA_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item69
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8713.2959,293.29358,4830.4229};
+					azimut=-24.764545;
+					id=333;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8718.1152,292.91748,4827.1392};
+					azimut=-24.764545;
+					id=334;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8719.9307,292.78012,4827.9785};
+					azimut=-24.764545;
+					id=335;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8721.7461,292.66171,4828.8145};
+					azimut=-24.764545;
+					id=336;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8723.5645,292.55319,4829.6523};
+					azimut=-24.764545;
+					id=337;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8725.3818,292.45142,4830.4917};
+					azimut=-24.764545;
+					id=338;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8727.1963,292.36478,4831.3286};
+					azimut=-24.764545;
+					id=339;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8729.0117,292.28232,4832.1665};
+					azimut=-24.764545;
+					id=340;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8730.8271,292.19559,4833.0039};
+					azimut=-24.764545;
+					id=341;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item70
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6008.9355,110.04667,7746.2617};
+					id=342;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item71
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8739.0059,291.96585,4839.5981};
+					azimut=-24.764545;
+					id=343;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item72
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={6598.9502,115.98229,8995.791};
+					azimut=8.9117413;
+					id=344;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={6601.1406,116.19831,8990.3848};
+					azimut=8.9117413;
+					id=345;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={6603.1152,116.29679,8990.0781};
+					azimut=8.9117413;
+					id=346;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={6605.0879,116.39526,8989.7695};
+					azimut=8.9117413;
+					id=347;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={6607.0674,116.49792,8989.4609};
+					azimut=8.9117413;
+					id=348;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={6609.0439,116.60613,8989.1484};
+					azimut=8.9117413;
+					id=349;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={6611.0205,116.71425,8988.8398};
+					azimut=8.9117413;
+					id=350;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={6612.9951,116.82801,8988.5273};
+					azimut=8.9117413;
+					id=351;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={6614.9697,116.9445,8988.2188};
+					azimut=8.9117413;
+					id=352;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item73
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6615.0039,117.25151,8963.4043};
+					azimut=8.9117413;
+					id=353;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item74
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6625.4336,117.57239,8989.1719};
+					azimut=8.9117413;
+					id=354;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item75
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={6177.6904,130.22661,7318.2212};
+					id=355;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={6180.6904,130.45702,7313.2212};
+					id=356;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={6182.6904,130.58989,7313.2212};
+					id=357;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={6184.6904,130.71469,7313.2212};
+					id=358;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={6186.6904,130.83946,7313.2212};
+					id=359;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={6188.6904,130.92122,7313.2212};
+					id=360;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={6190.6904,130.97562,7313.2212};
+					id=361;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={6192.6904,131.03001,7313.2212};
+					id=362;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={6194.6904,131.10869,7313.2212};
+					id=363;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item76
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6086.7563,126.96786,7659.9873};
+					id=364;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item77
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6204.8789,131.51463,7315.7837};
+					id=365;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item78
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5941.1675,107.4881,7849.9448};
+					id=366;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5944.1675,106.66371,7844.9448};
+					id=367;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5946.1675,106.71811,7844.9448};
+					id=368;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5948.1675,106.77251,7844.9448};
+					id=369;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5950.1675,106.87305,7844.9448};
+					id=370;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5952.1675,106.93066,7844.9448};
+					id=371;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5954.1675,106.98825,7844.9448};
+					id=372;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5956.1675,107.04941,7844.9448};
+					id=373;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5958.1675,107.11954,7844.9448};
+					id=374;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item79
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5962.0449,106.71608,7820.4351};
+					id=375;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item80
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5968.356,107.56505,7847.5073};
+					id=376;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item81
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5663.4375,96.286285,8520.7354};
+					azimut=-27.906719;
+					id=377;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5668.4287,95.938972,8517.7207};
+					azimut=-27.906719;
+					id=378;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5670.1963,95.720871,8518.6572};
+					azimut=-27.906719;
+					id=379;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5671.9639,95.526421,8519.5918};
+					azimut=-27.906719;
+					id=380;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5673.7305,95.342529,8520.5293};
+					azimut=-27.906719;
+					id=381;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5675.4985,95.231865,8521.4629};
+					azimut=-27.906719;
+					id=382;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5677.2656,95.137383,8522.3994};
+					azimut=-27.906719;
+					id=383;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5679.0337,95.095879,8523.3369};
+					azimut=-27.906719;
+					id=384;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5680.8008,95.061935,8524.2734};
+					azimut=-27.906719;
+					id=385;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item82
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8738.1289,291.96967,4835.042};
+					azimut=-24.764545;
+					id=386;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item83
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5688.6055,94.909218,8531.3066};
+					azimut=-27.906719;
+					id=387;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item84
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5968.7119,108.465,7738.3564};
+					id=388;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5971.7119,108.59087,7733.3564};
+					id=389;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5973.7119,108.63362,7733.3564};
+					id=390;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5975.7119,108.67566,7733.3564};
+					id=391;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5977.7119,108.73006,7733.3564};
+					id=392;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5979.7119,108.78265,7733.3564};
+					id=393;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5981.7119,108.83064,7733.3564};
+					id=394;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5983.7119,108.87864,7733.3564};
+					id=395;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5985.7119,108.92511,7733.3564};
+					id=396;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item85
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6178.2383,130.33058,7322.1885};
+					id=397;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item86
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5995.9004,109.22411,7735.9189};
+					id=398;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item87
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={6720.7319,282.04688,6253.0576};
+					id=399;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={6723.7319,282.10535,6248.0576};
+					id=400;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={6725.7319,281.98297,6248.0576};
+					id=401;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={6727.7319,281.88696,6248.0576};
+					id=402;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={6729.7319,281.79099,6248.0576};
+					id=403;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={6731.7319,281.70502,6248.0576};
+					id=404;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={6733.7319,281.65317,6248.0576};
+					id=405;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={6735.7319,281.60837,6248.0576};
+					id=406;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={6737.7319,281.56616,6248.0576};
+					id=407;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item88
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6741.6094,282.79147,6223.5479};
+					id=408;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item89
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6747.9204,281.349,6250.6201};
+					id=409;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item90
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={2836.1045,185.136,5320.3628};
+					azimut=52.178188;
+					id=410;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={2833.9946,185.39453,5314.9282};
+					azimut=52.178188;
+					id=411;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={2835.2192,185.41406,5313.3486};
+					azimut=52.178188;
+					id=412;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={2836.4448,185.43001,5311.769};
+					azimut=52.178188;
+					id=413;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={2837.6733,185.44188,5310.1875};
+					azimut=52.178188;
+					id=414;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={2838.8994,185.45372,5308.6089};
+					azimut=52.178188;
+					id=415;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={2840.127,185.46553,5307.0303};
+					azimut=52.178188;
+					id=416;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={2841.3525,185.47612,5305.4512};
+					azimut=52.178188;
+					id=417;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={2842.5801,185.48546,5303.8706};
+					azimut=52.178188;
+					id=418;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item91
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2825.5972,186.64674,5285.7788};
+					azimut=52.178188;
+					id=419;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item92
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5506.9531,79.223549,9474.9551};
+					azimut=11.331109;
+					id=420;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item93
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5833.3423,103.02599,8090.1353};
+					azimut=-35.405182;
+					id=421;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5838.6846,102.55346,8087.7988};
+					azimut=-35.405182;
+					id=422;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5840.3149,102.2736,8088.9546};
+					azimut=-35.405182;
+					id=423;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5841.9458,102.01923,8090.1147};
+					azimut=-35.405182;
+					id=424;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5843.5767,101.82829,8091.2744};
+					azimut=-35.405182;
+					id=425;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5845.207,101.64968,8092.4326};
+					azimut=-35.405182;
+					id=426;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5846.8345,101.52747,8093.5898};
+					azimut=-35.405182;
+					id=427;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5848.4653,101.38412,8094.751};
+					azimut=-35.405182;
+					id=428;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5850.0986,101.28163,8095.9092};
+					azimut=-35.405182;
+					id=429;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item94
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5867.4561,101.37542,8078.1782};
+					azimut=-35.405182;
+					id=430;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item95
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5856.9155,101.05968,8103.8979};
+					azimut=-35.405182;
+					id=431;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item96
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={7284.3374,359.93832,5713.6396};
+					azimut=-68.847115;
+					id=432;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={7290.0806,360.72983,5714.6362};
+					azimut=-68.847115;
+					id=433;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={7290.8032,360.79657,5716.4995};
+					azimut=-68.847115;
+					id=434;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={7291.5244,360.85822,5718.3657};
+					azimut=-68.847115;
+					id=435;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={7292.2476,360.93195,5720.2305};
+					azimut=-68.847115;
+					id=436;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={7292.9683,360.99597,5722.0981};
+					azimut=-68.847115;
+					id=437;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={7293.6909,361.06033,5723.958};
+					azimut=-68.847115;
+					id=438;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={7294.416,361.13455,5725.8232};
+					azimut=-68.847115;
+					id=439;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={7295.1353,361.21481,5727.6934};
+					azimut=-68.847115;
+					id=440;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item97
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7319.3916,365.04013,5722.4663};
+					azimut=-68.847115;
+					id=441;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item98
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7296.418,361.27512,5738.1211};
+					azimut=-68.847115;
+					id=442;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item99
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={6774.3965,177.06577,7254.7939};
+					azimut=-32.549782;
+					id=443;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={6779.6152,176.74995,7252.1948};
+					azimut=-32.549782;
+					id=444;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={6781.2969,176.37715,7253.2676};
+					azimut=-32.549782;
+					id=445;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={6782.9834,176.06909,7254.3423};
+					azimut=-32.549782;
+					id=446;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={6784.6719,175.97174,7255.4204};
+					azimut=-32.549782;
+					id=447;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={6786.3555,175.88251,7256.4995};
+					azimut=-32.549782;
+					id=448;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={6788.0439,175.80644,7257.5718};
+					azimut=-32.549782;
+					id=449;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={6789.729,175.72955,7258.6509};
+					azimut=-32.549782;
+					id=450;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={6791.415,175.66425,7259.7241};
+					azimut=-32.549782;
+					id=451;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item100
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6807.8682,177.40552,7241.1504};
+					azimut=-32.549782;
+					id=452;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item101
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6798.6245,175.24629,7267.3711};
+					azimut=-32.549782;
+					id=453;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item102
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5488.8877,82.023529,9504.8291};
+					azimut=11.331109;
+					id=454;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5490.8433,80.894669,9499.3359};
+					azimut=11.331109;
+					id=455;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5492.8066,79.992828,9498.9502};
+					azimut=11.331109;
+					id=456;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5494.7681,79.424812,9498.5479};
+					azimut=11.331109;
+					id=457;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5496.7251,79.135651,9498.1611};
+					azimut=11.331109;
+					id=458;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5498.687,78.834747,9497.7715};
+					azimut=11.331109;
+					id=459;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5500.6475,78.614326,9497.374};
+					azimut=11.331109;
+					id=460;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5502.6089,78.555229,9496.9834};
+					azimut=11.331109;
+					id=461;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5504.5693,78.529839,9496.5859};
+					azimut=11.331109;
+					id=462;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item103
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2846.2163,185.56781,5297.2168};
+					azimut=52.178188;
+					id=463;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item104
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5515.0654,78.368935,9497.0996};
+					azimut=11.331109;
+					id=464;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item105
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={7245.7778,355.96561,5706.7598};
+					azimut=-68.847115;
+					id=465;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={7251.5234,356.02594,5707.7559};
+					azimut=-68.847115;
+					id=466;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={7252.2476,355.95886,5709.6221};
+					azimut=-68.847115;
+					id=467;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={7252.9658,355.97266,5711.4844};
+					azimut=-68.847115;
+					id=468;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={7253.6895,356.01196,5713.3501};
+					azimut=-68.847115;
+					id=469;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={7254.4111,356.05493,5715.2183};
+					azimut=-68.847115;
+					id=470;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={7255.1323,356.10883,5717.083};
+					azimut=-68.847115;
+					id=471;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={7255.8584,356.16141,5718.9487};
+					azimut=-68.847115;
+					id=472;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={7256.5767,356.2233,5720.813};
+					azimut=-68.847115;
+					id=473;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item106
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7280.832,359.41873,5715.583};
+					azimut=-68.847115;
+					id=474;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item107
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7257.8638,356.27179,5731.2378};
+					azimut=-68.847115;
+					id=475;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item108
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={8961.9863,237.60252,5832.5708};
+					azimut=13.483369;
+					id=476;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={8963.7354,237.15948,5827.0122};
+					azimut=13.483369;
+					id=477;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={8965.6807,236.99255,5826.5415};
+					azimut=13.483369;
+					id=478;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={8967.6279,236.82559,5826.0752};
+					azimut=13.483369;
+					id=479;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={8969.5723,236.68092,5825.6079};
+					azimut=13.483369;
+					id=480;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={8971.5117,236.57576,5825.1436};
+					azimut=13.483369;
+					id=481;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={8973.4648,236.46936,5824.6743};
+					azimut=13.483369;
+					id=482;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={8975.4033,236.38036,5824.2104};
+					azimut=13.483369;
+					id=483;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={8977.3447,236.35516,5823.7466};
+					azimut=13.483369;
+					id=484;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item109
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8975.4033,235.5972,5799.0029};
+					azimut=13.483369;
+					id=485;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item110
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8987.8574,236.37106,5823.8647};
+					azimut=13.483369;
+					id=486;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item111
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3955.553,154.38434,9001.6445};
+					azimut=31.411612;
+					id=487;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3955.5076,154.8378,8995.8115};
+					azimut=31.411612;
+					id=488;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3957.2151,154.94756,8994.7695};
+					azimut=31.411612;
+					id=489;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3958.9221,155.05539,8993.7266};
+					azimut=31.411612;
+					id=490;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3960.6282,155.12892,8992.6846};
+					azimut=31.411612;
+					id=491;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3962.3357,155.20238,8991.6436};
+					azimut=31.411612;
+					id=492;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3964.0422,155.25371,8990.6016};
+					azimut=31.411612;
+					id=493;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3965.7488,155.30273,8989.5576};
+					azimut=31.411612;
+					id=494;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3967.4553,155.3517,8988.5156};
+					azimut=31.411612;
+					id=495;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item112
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5491.0229,242.30045,7696.123};
+					azimut=31.411612;
+					id=496;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item113
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3977.4875,155.40404,8985.3926};
+					azimut=31.411612;
+					id=497;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item114
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3589.9504,175.37877,5448.6294};
+					azimut=2.3129773;
+					id=498;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3592.7461,175.33472,5443.5103};
+					azimut=2.3129773;
+					id=499;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3594.7458,175.19487,5443.4302};
+					azimut=2.3129773;
+					id=500;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3596.7434,175.06357,5443.3501};
+					azimut=2.3129773;
+					id=501;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3598.7422,174.93224,5443.2686};
+					azimut=2.3129773;
+					id=502;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3600.7395,174.80453,5443.1885};
+					azimut=2.3129773;
+					id=503;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3602.7395,174.68271,5443.1079};
+					azimut=2.3129773;
+					id=504;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3604.7368,174.56111,5443.0254};
+					azimut=2.3129773;
+					id=505;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3606.7358,174.4424,5442.9458};
+					azimut=2.3129773;
+					id=506;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item115
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3609.6201,175.03981,5418.2998};
+					azimut=2.3129773;
+					id=507;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item116
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3617.0181,173.8242,5445.0962};
+					azimut=2.3129773;
+					id=508;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item117
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5452.4775,253.33501,7671.1733};
+					azimut=31.411612;
+					id=509;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5452.4321,255.98869,7665.3423};
+					azimut=31.411612;
+					id=510;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5454.1382,256.01541,7664.3003};
+					azimut=31.411612;
+					id=511;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5455.8457,256.0426,7663.2583};
+					azimut=31.411612;
+					id=512;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5457.5522,256.1329,7662.2148};
+					azimut=31.411612;
+					id=513;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5459.2593,256.27106,7661.1729};
+					azimut=31.411612;
+					id=514;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5460.9663,256.40842,7660.1318};
+					azimut=31.411612;
+					id=515;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5462.6724,256.56076,7659.0884};
+					azimut=31.411612;
+					id=516;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5464.3799,256.82996,7658.0459};
+					azimut=31.411612;
+					id=517;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item118
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5454.9146,270.65854,7635.1074};
+					azimut=31.411612;
+					id=518;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item119
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5474.4111,257.98636,7654.9233};
+					azimut=31.411612;
+					id=519;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item120
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1357.2146,441.74142,7080.0112};
+					azimut=72.516624;
+					id=520;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={1353.347,442.35629,7075.6475};
+					azimut=72.516624;
+					id=521;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={1353.9485,442.6546,7073.7417};
+					azimut=72.516624;
+					id=522;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={1354.5498,443.02127,7071.8325};
+					azimut=72.516624;
+					id=523;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={1355.1501,443.38715,7069.9263};
+					azimut=72.516624;
+					id=524;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={1355.7521,443.60333,7068.02};
+					azimut=72.516624;
+					id=525;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={1356.3521,443.55176,7066.1113};
+					azimut=72.516624;
+					id=526;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={1356.951,443.51859,7064.2007};
+					azimut=72.516624;
+					id=527;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={1357.5536,443.47037,7062.2949};
+					azimut=72.516624;
+					id=528;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item121
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1335.3398,444.07248,7051.2324};
+					azimut=72.516624;
+					id=529;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item122
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1363.0583,442.69034,7053.3477};
+					azimut=72.516624;
+					id=530;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item123
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3970.7761,153.35751,9019.6504};
+					azimut=31.411612;
+					id=531;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3970.7297,153.80243,9013.8184};
+					azimut=31.411612;
+					id=532;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3972.4373,153.88741,9012.7773};
+					azimut=31.411612;
+					id=533;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3974.1438,153.97496,9011.7344};
+					azimut=31.411612;
+					id=534;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3975.8513,154.04025,9010.6914};
+					azimut=31.411612;
+					id=535;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3977.5574,154.08208,9009.6504};
+					azimut=31.411612;
+					id=536;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3979.2644,154.13124,9008.6074};
+					azimut=31.411612;
+					id=537;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3980.9705,154.18602,9007.5645};
+					azimut=31.411612;
+					id=538;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3982.6785,154.20868,9006.5234};
+					azimut=31.411612;
+					id=539;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item124
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3973.2131,155.56291,8983.584};
+					azimut=31.411612;
+					id=540;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item125
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3992.7092,154.20477,9003.3984};
+					azimut=31.411612;
+					id=541;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item126
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={5452.5752,237.2375,7710.3398};
+					azimut=31.411612;
+					id=542;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={5452.5293,239.54964,7704.5083};
+					azimut=31.411612;
+					id=543;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5454.2363,239.3864,7703.4658};
+					azimut=31.411612;
+					id=544;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={5455.9429,239.22267,7702.4243};
+					azimut=31.411612;
+					id=545;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={5457.6504,239.09674,7701.3823};
+					azimut=31.411612;
+					id=546;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5459.3564,238.98,7700.3403};
+					azimut=31.411612;
+					id=547;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={5461.063,238.8712,7699.2974};
+					azimut=31.411612;
+					id=548;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={5462.7705,238.77557,7698.2554};
+					azimut=31.411612;
+					id=549;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={5464.4771,238.73349,7697.2124};
+					azimut=31.411612;
+					id=550;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item127
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5455.0122,251.32466,7674.2744};
+					azimut=31.411612;
+					id=551;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item128
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5474.5083,238.9528,7694.0894};
+					azimut=31.411612;
+					id=552;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item129
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3341.3362,95.80806,9610.5674};
+					azimut=-30.682949;
+					id=553;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+				class Item1
+				{
+					position[]={3346.4646,95.873077,9607.7939};
+					azimut=-30.682949;
+					id=554;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={3348.1851,95.84436,9608.8174};
+					azimut=-30.682949;
+					id=555;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={3349.9045,95.822136,9609.8369};
+					azimut=-30.682949;
+					id=556;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={3351.6255,95.823334,9610.8564};
+					azimut=-30.682949;
+					id=557;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={3353.3438,95.821449,9611.877};
+					azimut=-30.682949;
+					id=558;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={3355.0632,95.826576,9612.8965};
+					azimut=-30.682949;
+					id=559;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={3356.7859,95.831001,9613.9209};
+					azimut=-30.682949;
+					id=560;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={3358.5071,95.832336,9614.9404};
+					azimut=-30.682949;
+					id=561;
+					side="GUER";
+					vehicle="LOP_AM_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item130
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3374.3464,96.879066,9595.8408};
+					azimut=-30.682949;
+					id=562;
+					side="GUER";
+					vehicle="LOP_AM_Offroad_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item131
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3365.9592,95.7668,9622.3428};
+					azimut=-30.682949;
+					id=563;
+					side="GUER";
+					vehicle="LOP_AM_Landrover_M2";
+					leader=1;
+					skill=0.60000002;
+					init="(group this) setVariable [""GAIA_ZONE_INTEND"",[""20"", ""MOVE""], false]; (group this) setVariable [""mcc_gaia_cache"",true, true];";
+				};
+			};
+		};
+		class Item132
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8001.5859,296.23825,1908.7281};
+					azimut=136.85899;
+					id=564;
+					side="WEST";
+					vehicle="B_officer_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					text="OPL";
+					description="#1 OPL";
+				};
+			};
+		};
+		class Item133
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={7997.2549,296.25522,1908.9402};
+					azimut=136.85899;
+					id=565;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#2 Squad Leader";
+				};
+				class Item1
+				{
+					position[]={7996.5391,296.21161,1908.3948};
+					azimut=136.85899;
+					id=566;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#3 Ersthelfer";
+				};
+			};
+		};
+		class Item134
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7994.8574,296.24487,1908.811};
+					azimut=136.85899;
+					id=567;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#4 Team Leader";
+				};
+				class Item1
+				{
+					position[]={7993.9067,296.2525,1908.9064};
+					azimut=136.85899;
+					id=568;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#5 Grenadier";
+				};
+				class Item2
+				{
+					position[]={7994.1284,296.33099,1909.8876};
+					azimut=136.85899;
+					id=569;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#6 Assistent MG-Schütze";
+				};
+				class Item3
+				{
+					position[]={7995.1104,296.3183,1909.7289};
+					azimut=136.85899;
+					id=570;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#7 MG-Schütze";
+				};
+			};
+		};
+		class Item135
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7997.3267,296.36395,1910.2994};
+					azimut=136.85899;
+					id=571;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#8 Team Leader";
+				};
+				class Item1
+				{
+					position[]={7996.376,296.37158,1910.3948};
+					azimut=136.85899;
+					id=572;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#9 Grenadier";
+				};
+				class Item2
+				{
+					position[]={7996.5977,296.45007,1911.376};
+					azimut=136.85899;
+					id=573;
+					side="WEST";
+					vehicle="B_soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#10 Assistent AT-Schütze";
+				};
+				class Item3
+				{
+					position[]={7997.5796,296.43738,1911.2173};
+					azimut=136.85899;
+					id=574;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#11 AT-Schütze";
+				};
+			};
+		};
+		class Item136
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={8002.4463,296.34433,1912.329};
+					azimut=136.85899;
+					id=575;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#12 Squad Leader";
+				};
+				class Item1
+				{
+					position[]={8001.7305,296.40158,1911.7836};
+					azimut=136.85899;
+					id=576;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#13 Ersthelfer";
+				};
+			};
+		};
+		class Item137
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7999.9224,296.50345,1912.043};
+					azimut=136.85899;
+					id=577;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#14 Team Leader";
+				};
+				class Item1
+				{
+					position[]={7998.9717,296.51105,1912.1383};
+					azimut=136.85899;
+					id=578;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#15 Grenadier";
+				};
+				class Item2
+				{
+					position[]={7999.1934,296.54001,1913.1195};
+					azimut=136.85899;
+					id=579;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#16 Assistent MG-Schütze";
+				};
+				class Item3
+				{
+					position[]={8000.1753,296.48911,1912.9608};
+					azimut=136.85899;
+					id=580;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#17 MG-Schütze";
+				};
+			};
+		};
+		class Item138
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8002.4858,296.24353,1913.7206};
+					azimut=136.85899;
+					id=581;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#18 Team Leader";
+				};
+				class Item1
+				{
+					position[]={8001.5352,296.31195,1913.8159};
+					azimut=136.85899;
+					id=582;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#19 Grenadier";
+				};
+				class Item2
+				{
+					position[]={8001.7568,296.21576,1914.7971};
+					azimut=136.85899;
+					id=583;
+					side="WEST";
+					vehicle="B_soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#20 Assistent AT-Schütze";
+				};
+				class Item3
+				{
+					position[]={8002.7388,296.14984,1914.6384};
+					azimut=136.85899;
+					id=584;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#21 AT-Schütze";
+				};
+			};
+		};
+		class Item139
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7995.4268,296.54001,1914.7979};
+					azimut=136.85899;
+					id=585;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="#22 Medical Team Leader";
+				};
+				class Item1
+				{
+					position[]={7994.4761,296.54001,1914.8932};
+					azimut=136.85899;
+					id=586;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#23 Fahrer/Nahsicherer";
+				};
+				class Item2
+				{
+					position[]={7994.6978,296.54001,1915.8744};
+					azimut=136.85899;
+					id=587;
+					side="WEST";
+					vehicle="B_Soldier_lite_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#24 Feld Artz";
+				};
+				class Item3
+				{
+					position[]={7995.6797,296.54001,1915.7157};
+					azimut=136.85899;
+					id=588;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="#25 Feld Artz";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=31;
+		class Item0
+		{
+			position[]={8058.5508,296.04001,2013.1538};
+			azimut=148.86632;
+			id=589;
+			side="EMPTY";
+			vehicle="RHS_UAZ_MSV_01";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={8054.5645,296.04001,2011.0183};
+			azimut=148.29434;
+			id=590;
+			side="EMPTY";
+			vehicle="rhs_uaz_open_MSV_01";
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={8051.5264,296.04001,2009.0879};
+			azimut=148.86632;
+			id=591;
+			side="EMPTY";
+			vehicle="RHS_UAZ_MSV_01";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={8047.54,296.04001,2006.9524};
+			azimut=148.29434;
+			id=592;
+			side="EMPTY";
+			vehicle="rhs_uaz_open_MSV_01";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={8044.2168,296.04001,2005.1583};
+			azimut=148.86632;
+			id=593;
+			side="EMPTY";
+			vehicle="RHS_UAZ_MSV_01";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={8040.2305,296.04001,2003.0228};
+			azimut=148.29434;
+			id=594;
+			side="EMPTY";
+			vehicle="rhs_uaz_open_MSV_01";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={8037.1924,296.04001,2001.0924};
+			azimut=148.86632;
+			id=595;
+			side="EMPTY";
+			vehicle="RHS_UAZ_MSV_01";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={8033.2061,296.04001,1998.9569};
+			azimut=148.29434;
+			id=596;
+			side="EMPTY";
+			vehicle="rhs_uaz_open_MSV_01";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={8188.2197,296.04001,2069.9087};
+			azimut=150.017;
+			id=597;
+			side="EMPTY";
+			vehicle="rhs_9k79";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={8145.3701,296.04001,2046.6853};
+			azimut=150.017;
+			id=598;
+			side="EMPTY";
+			vehicle="rhs_9k79";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={8164.8511,296.04001,2013.6963};
+			azimut=150.017;
+			id=599;
+			side="EMPTY";
+			vehicle="RHS_Su25SM_vvs";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={8207.4355,296.04001,2036.3868};
+			azimut=150.017;
+			id=600;
+			side="EMPTY";
+			vehicle="RHS_Su25SM_vvs";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={8001.7227,296.26053,1976.7709};
+			azimut=150.017;
+			id=601;
+			side="EMPTY";
+			vehicle="RHS_Mi8AMT_vvs";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item13
+		{
+			position[]={8126.0967,296.04001,2004.0184};
+			azimut=150.017;
+			id=602;
+			side="EMPTY";
+			vehicle="RHS_Mi8mt_vvs";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item14
+		{
+			position[]={8098.6021,296.04001,1989.0435};
+			azimut=150.017;
+			id=603;
+			side="EMPTY";
+			vehicle="RHS_Mi8mt_Cargo_vvs";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item15
+		{
+			position[]={8130.3247,296.04001,2089.2854};
+			azimut=-299.17599;
+			id=604;
+			side="EMPTY";
+			vehicle="RHS_Ural_MSV_01";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item16
+		{
+			position[]={8119.6348,296.04001,2083.3579};
+			azimut=61.5737;
+			id=605;
+			side="EMPTY";
+			vehicle="RHS_Ural_Fuel_MSV_01";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item17
+		{
+			position[]={8108.9053,296.04001,2078.0356};
+			azimut=62.292;
+			id=606;
+			side="EMPTY";
+			vehicle="RHS_Ural_Open_VMF_01";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item18
+		{
+			position[]={8140.0859,296.04001,2094.4338};
+			azimut=61.681499;
+			id=607;
+			side="EMPTY";
+			vehicle="rhs_btr60_msv";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item19
+		{
+			position[]={8102.4819,296.04001,2074.1904};
+			azimut=58.955898;
+			id=608;
+			side="EMPTY";
+			vehicle="rhs_bmd1";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item20
+		{
+			position[]={8094.2021,296.04001,2069.9089};
+			azimut=59.5508;
+			id=609;
+			side="EMPTY";
+			vehicle="rhs_prp3_msv";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item21
+		{
+			position[]={8135.4795,296.04001,2073.0835};
+			azimut=-299.17599;
+			id=610;
+			side="EMPTY";
+			vehicle="RHS_Ural_MSV_01";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item22
+		{
+			position[]={8124.7896,296.04001,2067.156};
+			azimut=61.5737;
+			id=611;
+			side="EMPTY";
+			vehicle="RHS_Ural_Fuel_MSV_01";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item23
+		{
+			position[]={8114.0601,296.04001,2061.8337};
+			azimut=62.292;
+			id=612;
+			side="EMPTY";
+			vehicle="RHS_Ural_Open_VMF_01";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item24
+		{
+			position[]={8145.2407,296.04001,2078.2319};
+			azimut=61.681499;
+			id=613;
+			side="EMPTY";
+			vehicle="rhs_btr60_msv";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item25
+		{
+			position[]={8107.6367,296.04001,2057.9885};
+			azimut=58.955898;
+			id=614;
+			side="EMPTY";
+			vehicle="rhs_bmd1";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item26
+		{
+			position[]={8099.3569,296.04001,2053.707};
+			azimut=59.5508;
+			id=615;
+			side="EMPTY";
+			vehicle="rhs_prp3_msv";
+			lock="LOCKED";
+			skill=0.60000002;
+		};
+		class Item27
+		{
+			position[]={8030.0894,296.04001,1996.8833};
+			azimut=148.86632;
+			id=616;
+			side="EMPTY";
+			vehicle="RHS_UAZ_MSV_01";
+			skill=0.60000002;
+		};
+		class Item28
+		{
+			position[]={8026.103,296.04001,1994.7478};
+			azimut=148.29434;
+			id=617;
+			side="EMPTY";
+			vehicle="rhs_uaz_open_MSV_01";
+			skill=0.60000002;
+		};
+		class Item29
+		{
+			position[]={8022.5342,296.04001,1992.298};
+			azimut=148.866;
+			id=618;
+			side="EMPTY";
+			vehicle="RHS_UAZ_MSV_01";
+			skill=0.60000002;
+			text="MedUAZ1";
+		};
+		class Item30
+		{
+			position[]={8019.2119,296.04001,1990.6455};
+			azimut=148.29401;
+			id=619;
+			side="EMPTY";
+			vehicle="rhs_uaz_open_MSV_01";
+			skill=0.60000002;
+			text="MedUAZ2";
+		};
+	};
+	class Markers
+	{
+		items=23;
+		class Item0
+		{
+			position[]={8853.0537,266.85919,5244.5234};
+			name="1";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=600;
+			b=600;
+		};
+		class Item1
+		{
+			position[]={5996.8364,301.2879,5717.2568};
+			name="3";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item2
+		{
+			position[]={5225.4678,143.26985,6113.5737};
+			name="4";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item3
+		{
+			position[]={6083.4541,158.24121,7200.083};
+			name="5";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item4
+		{
+			position[]={5665.6655,82.199677,8817.3291};
+			name="6";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item5
+		{
+			position[]={8285.1113,174.02713,7706.0923};
+			name="9";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item6
+		{
+			position[]={3466.6855,239.38803,4084.7964};
+			name="10";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=700;
+			b=400;
+			angle=-62.808964;
+		};
+		class Item7
+		{
+			position[]={1468.1008,216.04855,3541.3364};
+			name="11";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=700;
+			b=400;
+			angle=-40.365501;
+		};
+		class Item8
+		{
+			position[]={663.55981,266.13693,3012.561};
+			name="12";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=700;
+			b=400;
+			angle=-206.245;
+		};
+		class Item9
+		{
+			position[]={2042.2894,274.60278,7654.5078};
+			name="13";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item10
+		{
+			position[]={3420.7786,166.27521,8339.1563};
+			name="14";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=600;
+			b=400;
+			angle=-56.302929;
+		};
+		class Item11
+		{
+			position[]={1544.9321,270.12582,5825.6821};
+			name="15";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item12
+		{
+			position[]={4581.9678,130.21487,9495.6182};
+			name="16";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item13
+		{
+			position[]={3146.885,60.314983,9935.9873};
+			name="17";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item14
+		{
+			position[]={3701.2314,79.592552,11013.595};
+			name="18";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item15
+		{
+			position[]={9158.25,204.98878,6780.96};
+			name="19";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=400;
+			b=400;
+		};
+		class Item16
+		{
+			position[]={6379.3496,431.84818,2614.4778};
+			name="enemy";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="SolidBorder";
+			a=6500;
+			b=50;
+			angle=168.983;
+			drawBorder=1;
+		};
+		class Item17
+		{
+			position[]={5923.9312,134.80318,6839.0244};
+			name="20";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=4000;
+			b=6000;
+			angle=79.157608;
+		};
+		class Item18
+		{
+			position[]={8047.4683,296.04001,1995.2224};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item19
+		{
+			position[]={8632.1807,250.97795,11509.291};
+			name="enemy_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="SolidBorder";
+			a=4000;
+			b=50;
+			angle=168.983;
+			drawBorder=1;
+		};
+		class Item20
+		{
+			position[]={4365.3867,78.208565,11756.304};
+			name="enemy_1_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="SolidBorder";
+			a=1000;
+			b=50;
+			angle=247.843;
+			drawBorder=1;
+		};
+		class Item21
+		{
+			position[]={8048.7241,296.04001,1975.8689};
+			name="Base1";
+			text="Heimat Basis";
+			type="Faction_RU";
+		};
+		class Item22
+		{
+			position[]={5722.6904,83.040001,11404.169};
+			name="Base1_1";
+			text="Ziel Basis";
+			type="Faction_RU";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={8198.5195,297.24396,2242.0144};
+			a=15;
+			b=15;
+			angle=77.315804;
+			rectangular=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="setTimeMultiplier 1";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"aia_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_takistan_config"
+	};
+	randomSeed=6252279;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"aia_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_takistan_config"
+	};
+	randomSeed=6014242;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"aia_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_takistan_config"
+	};
+	randomSeed=5581412;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
