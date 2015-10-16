@@ -87,9 +87,11 @@ if (isServer) then {
 call Spec_fnc_ki_init;
 if (hasInterface) then {
     [] spawn {
-        waitUntil {!isNil player};
+        waitUntil {!isNull player};
+		sleep 1;
         "JK_time" addPublicVariableEventHandler {
-            JK_varHandle getVariable ["JK_Time", [1985, 3, 12, 4, 0]];
+            local _time = JK_varHandle getVariable ["JK_Time", [1985, 3, 12, 4, 0]];
+			setDate _time;
         };
     };
 };
