@@ -83,5 +83,11 @@ missionNamespace setVariable [_var2, _sf ];
 //player globalchat format ["%1",_sf];
 
 {deleteVehicle _x;} count units _group;
-{deleteVehicle _x;} count _vehicles;
+{
+	{
+		deleteVehicle _x;
+	} count nearestObjects [getPos _x, "ACE_Wheel", 200];
+	deleteVehicle _x;
+	nil
+} count _vehicles;
 deletegroup _group;

@@ -108,3 +108,6 @@ call Spec_fnc_ki_init;
         };
     };
 };
+
+[10, 500, 10] spawn compile preprocessFileLineNumbers "JK_civilians.sqf";
+[5, 500, 1000] spawn compile preprocessFileLineNumbers "JK_traffic.sqf";

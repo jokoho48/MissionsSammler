@@ -17,7 +17,6 @@ JK_fnc_destructTent = {
     _array deleteAt (_array find _JKtent);
     deleteVehicle _JKtent;
     JK_varHandle setVariable ["JK_tent", _array];
-
 };
 
 JK_fnc_destructTentProgressBar = {
@@ -41,12 +40,12 @@ JK_fnc_buildTent = {
     JK_varHandle setVariable ["JK_tent", _array];
 };
 
-JK_buildTentProgressBar = {
+JK_fnc_buildTentProgressBar = {
     player playMove JK_BuildAnimation;
     [JK_BuildTime, _this, JK_fnc_buildTent, {(_this select 0) select 1 switchMove ""}, "Baue Mediziniesches Zelt auf"] call ace_common_fnc_progressBar;
 };
 
-local _action = ["JK_BuildTent", "Baue Mediziniesches Zelt auf", "", JK_buildTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
+local _action = ["JK_BuildTent", "Baue Mediziniesches Zelt auf", "", JK_fnc_buildTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
 
 {
     [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
