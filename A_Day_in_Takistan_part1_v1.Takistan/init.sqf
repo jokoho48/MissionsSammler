@@ -9,9 +9,11 @@ setDate [1985, 3, 12, 4, 0];
 
 //===============Delete Groups ====================
 if (isServer) then {
-    JK_varHandle = "Land_HumanSkull_F" createVehicle [0, 0, 0];
-    JK_varHandle allowDamage false;
-    publicVariable "JK_varHandle";
+    if (isNil "JK_varHandle") then {
+        JK_varHandle = "Land_HumanSkull_F" createVehicle [0, 0, 0];
+        JK_varHandle allowDamage false;
+        publicVariable "JK_varHandle";
+    };
     setTimeMultiplier 0.1;
     // From what range away from closest player should units be cached (in meters or what every metric system arma uses)?
     // To test this set it to 20 meters. Then make sure you get that close and move away.
@@ -48,7 +50,6 @@ if (isServer) then {
         _gaia_respawn = [];
         while {true} do {
             //player globalchat "Deleting started..............";
-
             {
                 _gaia_respawn = (missionNamespace getVariable ["GAIA_RESPAWN_" + str(_x),[]]);
                 //Store ALL original group setups

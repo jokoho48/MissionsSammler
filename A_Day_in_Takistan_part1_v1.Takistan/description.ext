@@ -5,7 +5,7 @@ enableDebugConsole = 1;
 respawnDialog = 0;
 respawn = "BASE";
 respawndelay=15;
-disabledAI=1;
+disabledAI = 1;
 
 class CfgFunctions {
     #include "spec_loadout\CfgFunctions.hpp"
