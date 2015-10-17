@@ -158,7 +158,7 @@ JK_deleteCars = {
             JK_carsArray = JK_carsArray - [_car];
             {
                 deleteVehicle _x;
-            } count nearestObjects [getPos _car, "ACE_Wheel", 200];
+            } count (_car getVariable ["ace_cargo_loaded", []]);
             deleteVehicle _car;
         };
     } count JK_carsArray;
