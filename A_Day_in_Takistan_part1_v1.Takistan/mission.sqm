@@ -41,7 +41,8 @@ class Mission
 		"A3_Structures_F_Walls",
 		"cup_misc3_config",
 		"cup_misc_e_config",
-		"casigns_e"
+		"casigns_e",
+		"rhs_c_weapons"
 	};
 	addOnsAuto[]=
 	{
@@ -81,6 +82,7 @@ class Mission
 		"cup_misc3_config",
 		"cup_misc_e_config",
 		"casigns_e",
+		"rhs_c_weapons",
 		"aia_takistan_config"
 	};
 	randomSeed=4134967;
@@ -5844,7 +5846,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=377;
+		items=385;
 		class Item0
 		{
 			position[]={8185.9609,296.04001,2072.0918};
@@ -9773,6 +9775,82 @@ class Mission
 			vehicle="SignM_FOB_Prostejov_EP1";
 			skill=0.60000002;
 			text="TelePortFlag";
+		};
+		class Item377
+		{
+			position[]={8012.7246,296.04001,1951.6158};
+			azimut=25.09062;
+			id=855;
+			side="EMPTY";
+			vehicle="ACE_medicalSupplyCrate_advanced";
+			skill=0.60000002;
+		};
+		class Item378
+		{
+			position[]={8015.2715,296.04001,1950.5378};
+			azimut=25.09062;
+			id=856;
+			side="EMPTY";
+			vehicle="ACE_medicalSupplyCrate_advanced";
+			skill=0.60000002;
+		};
+		class Item379
+		{
+			position[]={8007.7168,296.04001,1934.6564};
+			azimut=0.55201709;
+			id=857;
+			side="EMPTY";
+			vehicle="ACE_medicalSupplyCrate_advanced";
+			skill=0.60000002;
+		};
+		class Item380
+		{
+			position[]={8010.4814,296.04001,1934.7336};
+			azimut=0.55201709;
+			id=858;
+			side="EMPTY";
+			vehicle="ACE_medicalSupplyCrate_advanced";
+			skill=0.60000002;
+		};
+		class Item381
+		{
+			position[]={8006.0391,296.05692,1944.7327};
+			azimut=-164.02699;
+			id=859;
+			side="EMPTY";
+			vehicle="rhs_mags_crate";
+			skill=0.60000002;
+			text="crate_a_2";
+		};
+		class Item382
+		{
+			position[]={8006.4033,296.04001,1946.3214};
+			azimut=-164.02699;
+			id=860;
+			side="EMPTY";
+			vehicle="rhs_mags_crate";
+			skill=0.60000002;
+			text="crate_a_1";
+		};
+		class Item383
+		{
+			position[]={8006.0493,296.04001,1941.3634};
+			azimut=-187.763;
+			id=861;
+			side="EMPTY";
+			vehicle="rhs_mags_crate";
+			skill=0.60000002;
+			text="crate_a_4";
+		};
+		class Item384
+		{
+			position[]={8005.7456,296.04001,1942.9648};
+			azimut=-187.763;
+			id=862;
+			side="EMPTY";
+			vehicle="rhs_mags_crate";
+			skill=0.60000002;
+			text="crate_a_3";
 		};
 	};
 	class Markers

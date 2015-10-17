@@ -111,3 +111,27 @@ call Spec_fnc_ki_init;
 
 [10, 500, 10] spawn compile preprocessFileLineNumbers "JK_civilians.sqf";
 [5, 500, 1000] spawn compile preprocessFileLineNumbers "JK_traffic.sqf";
+
+
+if (isServer) then {
+    Reim_fnc_crateFiller = compile preProcessFileLineNumbers "R_Crate\r_crate.sqf";
+[
+    [
+        crate_a_1,
+        crate_a_2,
+        crate_a_3,
+        crate_a_4
+    ],
+    [
+        ["rhs_30Rnd_545x39_AK", 30],
+        ["rhs_100Rnd_762x54mmR_green", 5],
+        ["rhs_weap_rpg7", 1],
+        ["rhs_rpg7_PG7VL_mag", 4],
+        ["rhs_GRD40_White", 4],
+        ["rhs_GRD40_Red", 4],
+        ["rhs_VOG25", 12],
+        ["rhs_mag_rdg2_white", 12],
+        ["rhs_mag_rdg2_black", 6]
+    ]
+] call Reim_fnc_crateFiller;
+}
