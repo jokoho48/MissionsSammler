@@ -55,5 +55,24 @@ local _action = ["JK_BuildTent", "Baue Mediziniesches Zelt auf", "", JK_buildTen
 
 call compile preprocessFileLineNumbers "fixXEH.sqf";
 
-TelePortFlag addAction ["Teleport Tent 1", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 0))}, [], 99, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', [player, player]])) >= 1"];
-TelePortFlag addAction ["Teleport Tent 2", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 1))}, [], 98, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', [player, player]])) == 2"];
+TelePortFlag addAction ["Teleport Tent 1", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 0))}, [], 99, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', []])) >= 1"];
+TelePortFlag addAction ["Teleport Tent 2", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 1))}, [], 98, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', []])) == 2"];
+
+
+JK_MedicalMarker = [];
+JK_MedicalMarker_fnc_show = {
+    {
+        local _mrk = createMarkerLocal ["Medical Rally Point " + str(_forEachindex + 1), getPos _x];
+        _mrk setMarkerShapeLocal "ICON";
+        _mrk setMarkerTypeLocal "hd_start";
+        _mrk setMarkerColorLocal "ColorEAST";
+        JK_MedicalMarker pushBack _mrk;
+    } forEach (JK_varHandle getVariable ['JK_tent', []]);
+};
+
+JK_MedicalMarker_fnc_hide = {
+    {
+        deleteMarkerLocal _x;
+    } count JK_MedicalMarker;
+    JK_MedicalMarker = [];
+}
