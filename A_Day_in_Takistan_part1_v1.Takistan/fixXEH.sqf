@@ -47,5 +47,5 @@ JK_badClassnamesOld = [];
         } count (allMissionObjects "All" + allUnits + allDeadMen + vehicles);
     };
     call _fnc_PFH;
-    [_fnc_PFH, 120, []] call CBA_fnc_addPerFrameHandler
+    //[_fnc_PFH, 120, []] call CBA_fnc_addPerFrameHandler;
 }, [], 4] call ace_common_fnc_waitAndExecute;

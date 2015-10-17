@@ -9,6 +9,9 @@ setDate [1985, 3, 12, 4, 0];
 
 //===============Delete Groups ====================
 if (isServer) then {
+    JK_varHandle = "Land_HumanSkull_F" createVehicle [0, 0, 0];
+    JK_varHandle allowDamage false;
+    publicVariable "JK_varHandle";
     setTimeMultiplier 0.1;
     // From what range away from closest player should units be cached (in meters or what every metric system arma uses)?
     // To test this set it to 20 meters. Then make sure you get that close and move away.
@@ -85,13 +88,22 @@ if (isServer) then {
     }, 60, []] call CBA_fnc_addPerFrameHandler;
 };
 call Spec_fnc_ki_init;
-if (hasInterface) then {
-    [] spawn {
+[] spawn {
+    if (hasInterface) then {
         waitUntil {!isNull player};
-		sleep 1;
+        sleep 1;
         "JK_time" addPublicVariableEventHandler {
             local _time = JK_varHandle getVariable ["JK_Time", [1985, 3, 12, 4, 0]];
-			setDate _time;
+            setDate _time;
+        };
+        JK_registerPlayer = player;
+        publicVariableServer "JK_registerPlayer";
+    } else {
+        "JK_registerPlayer" addPublicVariableEventHandler {
+            JK_time = date;
+            (owner _this select 1) publicVariableClient "JK_time";
+
+            (owner _this select 1) publicVariableClient "JK_varHandle";
         };
     };
 };
