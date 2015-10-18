@@ -1,3 +1,4 @@
+waitUntil {!isNil "JK_MissionStarted"};
 params ["_maxCarDensity", "_carSpawnDistance", "_maxCarDistance"];
 JK_maxCarDensity = _maxCarDensity; //number of cars around 1 player at the same time
 JK_carSpawnDistance = _carSpawnDistance; //how far cars spawn away from player

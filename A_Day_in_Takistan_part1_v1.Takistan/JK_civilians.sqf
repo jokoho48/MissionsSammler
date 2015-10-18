@@ -1,3 +1,4 @@
+waitUntil {!isNil "JK_MissionStarted"};
 params ["_maxCivDensity", "_maxCivDistance", "_maxCivWaypoints"];
 JK_maxCivDensity = _maxCivDensity; //number of civs around 1 player at the same time
 JK_maxCivDistance = _maxCivDistance;    //max distance until civs despawn

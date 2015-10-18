@@ -1,6 +1,6 @@
 author="joko // Jonas";
-OnLoadName = "A Day in Takistan - Das Morgengrauen";
-OnLoadMission = "A Day in Takistan - Das Morgengrauen";
+OnLoadName = "A Day in Takistan - Morgengrauen";
+OnLoadMission = "A Day in Takistan - Morgengrauen";
 enableDebugConsole = 1;
 respawnDialog = 0;
 respawn = "BASE";
