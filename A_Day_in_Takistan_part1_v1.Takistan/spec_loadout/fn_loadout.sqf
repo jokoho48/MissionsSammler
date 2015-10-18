@@ -26,7 +26,7 @@ comment "Rifleman (Light)";
 _medevac = "B_Soldier_lite_F";
 
 if(_parameterCorrect) then {
-    if(side _x == west) then {
+   if(side _x == west) then {
         _type = typeOf _x;
 
         removeAllWeapons _x;
@@ -83,9 +83,9 @@ if(_parameterCorrect) then {
         [_x,"ACE_MapTools",0] call Spec_fnc_addItemToContainer;
 
         for "_i" from 1 to 2 do {[_x,"rhs_mag_rdg2_white",0] call Spec_fnc_addItemToContainer;};
-        for "_i" from 1 to 2 do {[_x,"rhs_mag_rdg2_black",0] call Spec_fnc_addItemToContainer;};
+        for "_i" from 1 to 2 do {[_x,"rhs_mag_rdg2_black",1] call Spec_fnc_addItemToContainer;};
 
-        [_x,"rhs_mag_rgd5",1] call Spec_fnc_addItemToContainer;
+        [_x,"rhs_mag_rgd5",0] call Spec_fnc_addItemToContainer;
         [_x,"rhs_mag_rgd5",0] call Spec_fnc_addItemToContainer;
 
         [_x, "ACE_Flashlight_KSF1",0] call Spec_fnc_addItemToContainer;
@@ -152,26 +152,26 @@ if(_parameterCorrect) then {
 
         comment "MG (change 'case _mgAssi :' ammunition for mmg above)";
         if(_type == _mg) then {
-            for "_i" from 1 to 3 do {[_x,"rhs_100Rnd_762x54mmR_green",2] call Spec_fnc_addItemToContainer;};
+            for "_i" from 1 to 3 do {[_x,"rhs_100Rnd_762x54mmR_green",3] call Spec_fnc_addItemToContainer;};
             _x addWeapon "rhs_weap_pkm";
         } else {
             if(_type == _opl || _type == _sql) then {
-                for "_i" from 1 to 1 do {[_x,"rhs_30Rnd_762x39mm",1] call Spec_fnc_addItemToContainer;};
-                for "_i" from 1 to 2 do {[_x,"rhs_30Rnd_762x39mm",2] call Spec_fnc_addItemToContainer;};
+                for "_i" from 1 to 1 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
+                for "_i" from 1 to 2 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
                 _x addWeapon "rhs_weap_akms_gp25";
-                [_x,"rhs_30Rnd_762x39mm",1] call Spec_fnc_addItemToContainer;
+                [_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;
             } else {
                 if(_type == _gl) then {
-                    for "_i" from 1 to 6 do {[_x,"rhs_30Rnd_762x39mm",1] call Spec_fnc_addItemToContainer;};
+                    for "_i" from 1 to 6 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
                     _x addWeapon "rhs_weap_akm_gp25";
                 } else {
                     comment "AT launcher";
                     if(_type == _at) then {
-                        _x addWeapon "rhs_weap_rpg7";
-                        for "_i" from 1 to 2 do {[_x, "rhs_rpg7_PG7VL_mag", 2] call Spec_fnc_addItemToContainer;};
-                    };
+                        for "_i" from 1 to 2 do {[_x, "rhs_rpg7_PG7VL_mag", 3] call Spec_fnc_addItemToContainer;};
+						_x addWeapon "rhs_weap_rpg7";
+				   };
                     comment "standard weapon";
-                    for "_i" from 1 to 6 do {[_x,"rhs_30Rnd_762x39mm",1] call Spec_fnc_addItemToContainer;};
+                    for "_i" from 1 to 6 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
                     if(_type == _tf) then {
                         _x addWeapon "rhs_weap_akms_gp25";
                     } else {
@@ -180,8 +180,9 @@ if(_parameterCorrect) then {
                 };
             };
         };
-        for "_i" from 1 to 2 do {[_x,"rhs_mag_9x18_12_57N181S",1] call Spec_fnc_addItemToContainer;};
-        _x addWeapon "rhs_weap_makarov_pmm";
+		[_x,"rhs_mag_9x18_12_57N181S",3] call Spec_fnc_addItemToContainer;
+		_x addWeapon "rhs_weap_makarov_pmm";
+		[_x,"rhs_mag_9x18_12_57N181S",3] call Spec_fnc_addItemToContainer;
     };
 };
 
