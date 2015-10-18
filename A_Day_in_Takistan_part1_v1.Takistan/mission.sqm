@@ -10017,14 +10017,14 @@ class Mission
 		{
 			position[]={8255.8818,296.04001,2087.3132};
 			name="Base1";
-			text="Heimat Basis";
+			text="Süd Basis";
 			type="Faction_RU";
 		};
 		class Item17
 		{
 			position[]={5722.6904,83.040001,11404.169};
 			name="Base1_1";
-			text="Ziel Basis";
+			text="Flughafen Rasman";
 			type="Faction_RU";
 		};
 		class Item18
