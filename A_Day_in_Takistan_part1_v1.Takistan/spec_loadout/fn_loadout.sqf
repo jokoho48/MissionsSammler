@@ -39,30 +39,31 @@ if(_parameterCorrect) then {
         removeGoggles _x;
 
         comment "Edit Vest, Uniform, Backpack, Headgear (, Googgles)";
-        _x forceAddUniform "rhs_uniform_mflora_patchless";
+
+        [_x, "rhs_uniform_mflora_patchless"] call Spec_fnc_addContainer;
         if(_type == _opl) then {
-            _x addVest "rhs_vest_commander";
+            [_x, "rhs_vest_commander"] call Spec_fnc_addContainer;
             _x addHeadgear "rhs_gssh18";
         } else {
             _x addHeadgear "rhs_fieldcap_ml";
             if(_type == _medic || _type == _medevac) then {
-                _x addVest "rhs_6b23_ML_medic";
+                [_x, "rhs_6b23_ML_medic"] call Spec_fnc_addContainer;
             } else {
                 if(_type == _tf || _type == _sql) then {
-                    _x addVest "rhs_6b23_ML_crewofficer";
+                    [_x, "rhs_6b23_ML_crewofficer"] call Spec_fnc_addContainer;
                 } else {
-                    _x addVest "rhs_6b23_ML_rifleman";
+                    [_x, "rhs_6b23_ML_rifleman"] call Spec_fnc_addContainer;
                 };
             };
         };
 
         if(_type == _opl || _type == _sql) then {
-            _x addBackpack "tf_bussole";
+            [_x, "tf_bussole"] call Spec_fnc_addContainer;
         } else {
             if(_type == _at) then {
-                _x addBackpack "rhs_rpg_empty";
+                [_x, "rhs_rpg_empty"] call Spec_fnc_addContainer;
             } else {
-                _x addBackpack "rhs_sidor";
+                [_x, "rhs_sidor"] call Spec_fnc_addContainer;
             };
         };
 
@@ -168,8 +169,8 @@ if(_parameterCorrect) then {
                     comment "AT launcher";
                     if(_type == _at) then {
                         for "_i" from 1 to 2 do {[_x, "rhs_rpg7_PG7VL_mag", 3] call Spec_fnc_addItemToContainer;};
-						_x addWeapon "rhs_weap_rpg7";
-				   };
+                        _x addWeapon "rhs_weap_rpg7";
+                   };
                     comment "standard weapon";
                     for "_i" from 1 to 6 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
                     if(_type == _tf) then {
@@ -180,9 +181,9 @@ if(_parameterCorrect) then {
                 };
             };
         };
-		[_x,"rhs_mag_9x18_12_57N181S",3] call Spec_fnc_addItemToContainer;
-		_x addWeapon "rhs_weap_makarov_pmm";
-		[_x,"rhs_mag_9x18_12_57N181S",3] call Spec_fnc_addItemToContainer;
+        [_x,"rhs_mag_9x18_12_57N181S",3] call Spec_fnc_addItemToContainer;
+        _x addWeapon "rhs_weap_makarov_pmm";
+        [_x,"rhs_mag_9x18_12_57N181S",3] call Spec_fnc_addItemToContainer;
     };
 };
 
