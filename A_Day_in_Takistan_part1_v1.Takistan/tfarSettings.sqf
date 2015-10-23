@@ -27,55 +27,57 @@ OPF_F_rifleman_tf_faction_radio = "tf_pnr1000a";
 
 //frequencies
 //blufor
-local _normalFrequenz = "110";
+private ["_normalFrequenz", "_secoundaryFrequenz", "_LR", "_LRA"];
+_strPlayer = str player;
+_normalFrequenz = "110";
 _secoundaryFrequenz = "130";
 _LR = "30";
 _LRA = "31";
-if ((str player) in ["OPL"]) then {
+if (_strPlayer in ["OPL"]) then {
     _normalFrequenz = "110";
     _secoundaryFrequenz = "130";
 };
 
-if ((str player) in ["SQL1", "Ersthelfen1"]) then {
+if (_strPlayer in ["SQL1", "Ersthelfen1"]) then {
     _normalFrequenz = "111";
     _secoundaryFrequenz = "122";
 };
 
-if ((str player) in ["TL1", "Gren1", "MGAss1", "MG1"]) then {
+if (_strPlayer in ["TL1", "Gren1", "MGAss1", "MG1"]) then {
     _normalFrequenz = "113";
     _secoundaryFrequenz = "122";
 };
 
-if ((str player) in ["TL2", "Gren2", "ATAss1", "AT1"]) then {
+if (_strPlayer in ["TL2", "Gren2", "ATAss1", "AT1"]) then {
     _normalFrequenz = "114";
     _secoundaryFrequenz = "122";
 };
 
-if ((str player) in ["SQL2", "Ersthelfen2"]) then {
+if (_strPlayer in ["SQL2", "Ersthelfen2"]) then {
     _normalFrequenz = "114";
     _secoundaryFrequenz = "123";
 };
 
-if ((str player) in ["TL3", "Gren3", "MGAss2", "MG2"]) then {
+if (_strPlayer in ["TL3", "Gren3", "MGAss2", "MG2"]) then {
     _normalFrequenz = "115";
     _secoundaryFrequenz = "123";
 };
 
-if ((str player) in ["TL4", "Gren4", "ATAss2", "AT2"]) then {
+if (_strPlayer in ["TL4", "Gren4", "ATAss2", "AT2"]) then {
     _normalFrequenz = "116";
     _secoundaryFrequenz = "123";
 };
 
-if ((str player) in ["TL5", "NAH", "San1", "San2"]) then {
+if (_strPlayer in ["TL5", "NAH", "San1", "San2"]) then {
     _normalFrequenz = "117";
     _secoundaryFrequenz = "130";
     _LR = "31";
     _LRA = "30";
 };
 
-if ((str player) in ["OPL","SQL1","SQL2", "TL5"]) then {
-    [(call TFAR_fnc_activeLrRadio), 1, _LR] call TFAR_fnc_SetChannelFrequency;
-    [(call TFAR_fnc_activeLrRadio), 1, _LR] call TFAR_fnc_SetChannelFrequency;
+if (_strPlayer in ["OPL","SQL1","SQL2", "TL5"]) then {
+    [(call TFAR_fnc_activeLrRadio), 0, _LR] call TFAR_fnc_SetChannelFrequency;
+    [(call TFAR_fnc_activeLrRadio), 1, _LRA] call TFAR_fnc_SetChannelFrequency;
     [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 1] call TFAR_fnc_setAdditionalLrChannel;
 
 };

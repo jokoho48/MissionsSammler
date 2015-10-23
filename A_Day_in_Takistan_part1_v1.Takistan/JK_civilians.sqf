@@ -153,10 +153,11 @@ JK_getHouses = {
 };
 
 JK_spawnciv = {
+    private ["_count", "_temphouses"];
     params ["_position", "_count"];
-    local _count = JK_maxCivDensity - _count;
+    _count = JK_maxCivDensity - _count;
 
-    local _temphouses = _position call JK_getHouses;
+    _temphouses = _position call JK_getHouses;
 
     if (count _temphouses > 0) then {
         for "_b" from 1 to _count do {

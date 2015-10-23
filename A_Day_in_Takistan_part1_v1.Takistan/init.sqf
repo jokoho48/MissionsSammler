@@ -96,7 +96,8 @@ call Spec_fnc_ki_init;
         waitUntil {!isNull player};
         sleep 1;
         "JK_time" addPublicVariableEventHandler {
-            local _time = JK_varHandle getVariable ["JK_Time", [1985, 3, 12, 4, 0]];
+            private "_time";
+            _time = JK_varHandle getVariable ["JK_Time", [1985, 3, 12, 4, 0]];
             setDate _time;
         };
         JK_registerPlayer = player;

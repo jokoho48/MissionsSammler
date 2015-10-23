@@ -9,8 +9,9 @@ JK_fnc_canBuildTent = {
 };
 
 JK_fnc_destructTent = {
+    private ["_JKvehicle"];
     (_this select 0) params ["_JKtent","_JKplayer"];
-    local _JKvehicle = _JKtent getVariable ["JK_tentVehicle", objNull];
+    _JKvehicle = _JKtent getVariable ["JK_tentVehicle", objNull];
     _JKtent setVariable ["JK_tentVehicle", objNull, true];
     _JKvehicle setVariable ["JK_buildTent", false, true];
     _array = JK_varHandle getVariable ["JK_tent", []];
@@ -25,12 +26,13 @@ JK_fnc_destructTentProgressBar = {
 };
 
 JK_fnc_buildTent = {
+    private ["_position", "_JKtent", "_action"];
     (_this select 0) params ["_JKvehicle","_JKplayer"];
-    local _position = (getPos _JKvehicle) findEmptyPosition [5, 20, "MASH"];
+    _position = (getPos _JKvehicle) findEmptyPosition [5, 20, "MASH"];
     if (_position isEqualTo []) exitWith {hint "Kein Platz zum Aufbauen eines Medizinieschen Notfallzeltes."};
-    local _JKtent = "MASH" createVehicle _position;
+    _JKtent = "MASH" createVehicle _position;
     _JKtent setdir (getDir _JKvehicle);
-    local _action = ["JK_BuildTent", "Zelt Abbauen", "", JK_fnc_destructTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
+    _action = ["JK_BuildTent", "Zelt Abbauen", "", JK_fnc_destructTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
     [[_JKtent, 0, ["ACE_MainActions"], _action], "ace_interact_menu_fnc_addActionToObject", true] call BIS_fnc_MP;
     //[_JKtent, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
     _JKtent setVariable ["ace_medical_isMedicalFacility", true, true];
@@ -42,14 +44,16 @@ JK_fnc_buildTent = {
 };
 
 JK_fnc_buildTentProgressBar = {
+    private "_position";
     params ["_JKvehicle"];
-    local _position = (getPos _JKvehicle) findEmptyPosition [5, 20, "MASH"];
+    _position = (getPos _JKvehicle) findEmptyPosition [5, 20, "MASH"];
     if (_position isEqualTo []) exitWith {hint "Kein Platz zum Aufbauen eines Medizinieschen Notfallzeltes."};
     player playMove JK_BuildAnimation;
     [JK_BuildTime, _this, JK_fnc_buildTent, {(_this select 0) select 1 switchMove ""}, "Baue Mediziniesches Zelt auf"] call ace_common_fnc_progressBar;
 };
 
-local _action = ["JK_BuildTent", "Baue Mediziniesches Zelt auf", "", JK_fnc_buildTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
+private "_action";
+_action = ["JK_BuildTent", "Baue Mediziniesches Zelt auf", "", JK_fnc_buildTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
 
 {
     [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
@@ -64,8 +68,9 @@ TelePortFlag addAction ["Teleport Tent 2", {(_this select 1) setPos (getPos ((JK
 JK_MedicalMarker = [];
 JK_MedicalMarker_fnc_show = {
     {
-        local _name = "Medical Rally Point " + str(_forEachindex + 1);
-        local _mrk = createMarkerLocal [_name, getPos _x];
+        private ["_name", "_mrk"];
+        _name = "Medical Rally Point " + str(_forEachindex + 1);
+        _mrk = createMarkerLocal [_name, getPos _x];
         _mrk setMarkerShapeLocal "ICON";
         _mrk setMarkerTypeLocal "hd_start";
         _mrk setMarkerColorLocal "ColorEAST";

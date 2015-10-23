@@ -32,8 +32,8 @@ JK_comCarList = [
 ];
 
 JK_getDrivingRoads = {
-    local _roads = _this nearRoads JK_maxCarDistance;
-
+    private "_roads";
+    _roads = _this nearRoads JK_maxCarDistance;
     _roads
 };
 
