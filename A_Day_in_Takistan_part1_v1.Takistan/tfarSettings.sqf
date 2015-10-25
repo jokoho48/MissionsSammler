@@ -29,48 +29,39 @@ OPF_F_rifleman_tf_faction_radio = "tf_pnr1000a";
 //blufor
 private ["_normalFrequenz", "_secoundaryFrequenz", "_LR", "_LRA"];
 _strPlayer = str player;
-_normalFrequenz = "110";
-_secoundaryFrequenz = "130";
+_normalFrequenz = "111";
 _LR = "30";
 _LRA = "31";
 if (_strPlayer in ["OPL"]) then {
     _normalFrequenz = "110";
-    _secoundaryFrequenz = "130";
 };
 
 if (_strPlayer in ["SQL1", "Ersthelfen1"]) then {
     _normalFrequenz = "111";
-    _secoundaryFrequenz = "122";
 };
 
 if (_strPlayer in ["TL1", "Gren1", "MGAss1", "MG1"]) then {
-    _normalFrequenz = "113";
-    _secoundaryFrequenz = "122";
+    _normalFrequenz = "111";
 };
 
 if (_strPlayer in ["TL2", "Gren2", "ATAss1", "AT1"]) then {
-    _normalFrequenz = "114";
-    _secoundaryFrequenz = "122";
+    _normalFrequenz = "111";
 };
 
 if (_strPlayer in ["SQL2", "Ersthelfen2"]) then {
-    _normalFrequenz = "114";
-    _secoundaryFrequenz = "123";
+    _normalFrequenz = "112";
 };
 
 if (_strPlayer in ["TL3", "Gren3", "MGAss2", "MG2"]) then {
-    _normalFrequenz = "115";
-    _secoundaryFrequenz = "123";
+    _normalFrequenz = "112";
 };
 
 if (_strPlayer in ["TL4", "Gren4", "ATAss2", "AT2"]) then {
-    _normalFrequenz = "116";
-    _secoundaryFrequenz = "123";
+    _normalFrequenz = "112";
 };
 
 if (_strPlayer in ["TL5", "NAH", "San1", "San2"]) then {
-    _normalFrequenz = "117";
-    _secoundaryFrequenz = "130";
+    _normalFrequenz = "113";
     _LR = "31";
     _LRA = "30";
 };
@@ -79,8 +70,6 @@ if (_strPlayer in ["OPL","SQL1","SQL2", "TL5"]) then {
     [(call TFAR_fnc_activeLrRadio), 0, _LR] call TFAR_fnc_SetChannelFrequency;
     [(call TFAR_fnc_activeLrRadio), 1, _LRA] call TFAR_fnc_SetChannelFrequency;
     [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 1] call TFAR_fnc_setAdditionalLrChannel;
-
 };
 [(call TFAR_fnc_activeSwRadio), 1, _normalFrequenz] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 2, _secoundaryFrequenz] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_setAdditionalSwChannel;
+//[(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_setAdditionalSwChannel;

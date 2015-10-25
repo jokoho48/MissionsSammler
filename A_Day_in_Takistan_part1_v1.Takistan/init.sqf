@@ -7,8 +7,6 @@ for "_x" from 1 to 100 do {
     format ["%1",_x] setMarkerAlpha 0;
 };
 
-setDate [1985, 3, 12, 4, 0];
-
 //===============Delete Groups ====================
 if (isServer) then {
     if (isNil "JK_varHandle") then {
@@ -76,37 +74,16 @@ if (isServer) then {
             sleep 2;
         };
     };
-
-    setDate [1985, 3, 12, 4, 0];
-    JK_varHandle setVariable ["JK_Time", date];
-    [{
-        if (timeMultiplier != 0.1) then {
-            if (time <= 14400) then {
-                setTimeMultiplier (time/14400);
-            };
-        };
-        JK_time = date;
-        publicVariable "JK_time";
-        JK_varHandle setVariable ["JK_Time", date];
-    }, 60, []] call CBA_fnc_addPerFrameHandler;
 };
 call Spec_fnc_ki_init;
 [] spawn {
     if (hasInterface) then {
         waitUntil {!isNull player};
         sleep 1;
-        "JK_time" addPublicVariableEventHandler {
-            private "_time";
-            _time = JK_varHandle getVariable ["JK_Time", [1985, 3, 12, 4, 0]];
-            setDate _time;
-        };
         JK_registerPlayer = player;
         publicVariableServer "JK_registerPlayer";
     } else {
         "JK_registerPlayer" addPublicVariableEventHandler {
-            JK_time = date;
-            (owner _this select 1) publicVariableClient "JK_time";
-
             (owner _this select 1) publicVariableClient "JK_varHandle";
         };
     };
