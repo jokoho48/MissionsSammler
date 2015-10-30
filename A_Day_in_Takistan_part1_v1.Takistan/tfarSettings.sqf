@@ -32,7 +32,7 @@ _strPlayer = str player;
 _normalFrequenz = "111";
 _LR = "30";
 _LRA = "31";
-if (_strPlayer in ["OPL"]) then {
+if (_strPlayer in ["OPL", "Funker"]) then {
     _normalFrequenz = "110";
 };
 
@@ -67,8 +67,8 @@ if (_strPlayer in ["TL5", "NAH", "San1", "San2"]) then {
 };
 
 if (_strPlayer in ["OPL","SQL1","SQL2", "TL5"]) then {
-    [(call TFAR_fnc_activeLrRadio), 0, _LR] call TFAR_fnc_SetChannelFrequency;
-    [(call TFAR_fnc_activeLrRadio), 1, _LRA] call TFAR_fnc_SetChannelFrequency;
+    [(call TFAR_fnc_activeLrRadio), 1, _LR] call TFAR_fnc_SetChannelFrequency;
+    [(call TFAR_fnc_activeLrRadio), 2, _LRA] call TFAR_fnc_SetChannelFrequency;
     [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 1] call TFAR_fnc_setAdditionalLrChannel;
 };
 [(call TFAR_fnc_activeSwRadio), 1, _normalFrequenz] call TFAR_fnc_SetChannelFrequency;

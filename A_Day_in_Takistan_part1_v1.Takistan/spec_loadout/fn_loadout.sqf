@@ -1,3 +1,4 @@
+private ["_opl", "_sql", "_medic", "_tf", "_gl", "_mg", "_mgAssi", "_at", "_atAssi", "_medevac", "_type"];
 waitUntil {!isNull player || isServer};
 _parameterCorrect = params [["_x",objNull,[objNull]]];
 
@@ -77,19 +78,20 @@ if(_parameterCorrect) then {
 
         if(_type == _opl || _type == _tf || _type == _sql) then {
             for "_i" from 1 to 2 do {[_x,"ACE_CableTie",1] call Spec_fnc_addItemToContainer;};
+            [_x, "ACE_Flashlight_KSF1",0] call Spec_fnc_addItemToContainer;
         };
 
         comment "standard equipment (ear plugs, grenades)";
         [_x,"ACE_EarPlugs",0] call Spec_fnc_addItemToContainer;
         [_x,"ACE_MapTools",0] call Spec_fnc_addItemToContainer;
 
-        for "_i" from 1 to 2 do {[_x,"rhs_mag_rdg2_white",0] call Spec_fnc_addItemToContainer;};
-        for "_i" from 1 to 2 do {[_x,"rhs_mag_rdg2_black",1] call Spec_fnc_addItemToContainer;};
+        for "_i" from 1 to 3 do {[_x,"Chemlight_red",0] call Spec_fnc_addItemToContainer;};
+        for "_i" from 1 to 2 do {[_x,"rhs_mag_nspn_red",1] call Spec_fnc_addItemToContainer;};
 
         [_x,"rhs_mag_rgd5",0] call Spec_fnc_addItemToContainer;
         [_x,"rhs_mag_rgd5",0] call Spec_fnc_addItemToContainer;
 
-        [_x, "ACE_Flashlight_KSF1",0] call Spec_fnc_addItemToContainer;
+
 
         comment "medic equipment";
         switch _type do {
@@ -130,8 +132,8 @@ if(_parameterCorrect) then {
         comment "role specific special equipment";
         switch _type do {
             case _tf : {
-                for "_i" from 1 to 6 do {[_x,"rhs_GRD40_White",2] call Spec_fnc_addItemToContainer;};
-                for "_i" from 1 to 6 do {[_x,"rhs_GRD40_Red",2] call Spec_fnc_addItemToContainer;};
+                for "_i" from 1 to 6 do {[_x,"rhs_VG40OP_white",2] call Spec_fnc_addItemToContainer;};
+                for "_i" from 1 to 6 do {[_x,"rhs_VG40OP_red",2] call Spec_fnc_addItemToContainer;};
             };
             case _gl : {
                 for "_i" from 1 to 12 do {[_x,"rhs_VOG25",2] call Spec_fnc_addItemToContainer;};
@@ -159,7 +161,11 @@ if(_parameterCorrect) then {
             if(_type == _opl || _type == _sql) then {
                 for "_i" from 1 to 1 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
                 for "_i" from 1 to 2 do {[_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;};
-                _x addWeapon "rhs_weap_akms_gp25";
+                if (_type == _sql) then {
+                    _x addWeapon "rhs_weap_akms_gp25";
+                } else {
+                    _x addWeapon "rhs_weap_akm";
+                };
                 [_x,"rhs_30Rnd_762x39mm",3] call Spec_fnc_addItemToContainer;
             } else {
                 if(_type == _gl) then {

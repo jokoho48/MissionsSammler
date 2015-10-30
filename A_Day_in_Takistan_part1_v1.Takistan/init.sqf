@@ -14,7 +14,6 @@ if (isServer) then {
         JK_varHandle allowDamage false;
         publicVariable "JK_varHandle";
     };
-    setTimeMultiplier 0.1;
     // From what range away from closest player should units be cached (in meters or what every metric system arma uses)?
     // To test this set it to 20 meters. Then make sure you get that close and move away.
     // You will notice 2 levels of caching 1 all but leader, 2 completely away
@@ -114,4 +113,4 @@ if (isServer) then {
         ["rhs_mag_rdg2_black", 6]
     ]
 ] call Reim_fnc_crateFiller;
-}
+};

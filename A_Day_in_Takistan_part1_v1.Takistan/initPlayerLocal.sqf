@@ -34,7 +34,6 @@ JK_fnc_buildTent = {
     _JKtent setdir (getDir _JKvehicle);
     _action = ["JK_BuildTent", "Zelt Abbauen", "", JK_fnc_destructTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
     [[_JKtent, 0, ["ACE_MainActions"], _action], "ace_interact_menu_fnc_addActionToObject", true] call BIS_fnc_MP;
-    //[_JKtent, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
     _JKtent setVariable ["ace_medical_isMedicalFacility", true, true];
     _JKvehicle setVariable ["JK_buildTent", true, true];
     _JKtent setVariable ["JK_tentVehicle", _JKvehicle, true];
