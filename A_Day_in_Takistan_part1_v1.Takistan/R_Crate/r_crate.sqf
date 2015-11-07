@@ -1,22 +1,24 @@
 params ["_crates", "_content"];
+
 {
-    _currentCrate = _x;
-    clearWeaponCargoGlobal _currentCrate;
-    clearMagazineCargoGlobal _currentCrate;
-    clearItemCargoGlobal _currentCrate;
-    clearBackpackCargoGlobal _currentCrate;
+    _crateObject = _x;
     {
-        if (isClass(configFile >> "CfgMagazines" >> (_x select 0))) then {
-            _currentCrate addMagazineCargoGlobal _x;
-        };
-        if (isClass(configFile >> "CfgWeapons" >> (_x select 0))) then {
-            _currentCrate addWeaponCargoGlobal _x;
-        };
-        if ((_x select 0) isKindOf "ItemCore") then {
-            _currentCrate addItemCargoGlobal _x;
-        };
-        if ((_x select 0) isKindOf "Bag_Base") then {
-            _currentCrate addBackpackCargoGlobal _x;
+        call {
+            if ((_x select 0) isKindOf ["ItemCore", configFile >> "CfgWeapons"]) exitWith {
+                _crateObject addItemCargoGlobal _x;
+            };
+
+            if (isClass(configFile >> "CfgMagazines" >> (_x select 0))) exitWith {
+                _crateObject addMagazineCargoGlobal _x;
+            };
+
+            if ((_x select 0) isKindOf "Bag_Base") exitWith {
+                _crateObject addBackpackCargoGlobal _x;
+            };
+
+            if (isClass(configFile >> "CfgWeapons" >> (_x select 0))) exitWith {
+                _crateObject addWeaponCargoGlobal _x;
+            };
         };
         nil
     } count _content;
