@@ -2,6 +2,10 @@ params ["_crates", "_content"];
 
 {
     _crateObject = _x;
+    clearWeaponCargoGlobal _currentCrate;
+    clearMagazineCargoGlobal _currentCrate;
+    clearItemCargoGlobal _currentCrate;
+    clearBackpackCargoGlobal _currentCrate;
     {
         call {
             if ((_x select 0) isKindOf ["ItemCore", configFile >> "CfgWeapons"]) exitWith {
