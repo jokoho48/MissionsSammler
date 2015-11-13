@@ -106,7 +106,8 @@ if (isServer) then {
             ["rhs_VG40OP_red", 4],
             ["rhs_mag_rgd5", 12],
             ["rhs_mag_nspn_red", 12],
-            ["rhs_mag_rdg2_black", 6]
+            ["rhs_mag_rdg2_black", 6],
+            ["ToolKit", 1]
         ]
     ] call Reim_fnc_crateFiller;
 };
