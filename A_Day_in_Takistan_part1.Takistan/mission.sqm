@@ -8775,23 +8775,8 @@ class Mission
 	};
 	class Sensors
 	{
-		items=2;
+		items=1;
 		class Item0
-		{
-			position[]={8199.2578,296.82709,2231.7119};
-			a=15;
-			b=15;
-			angle=77.315804;
-			rectangular=1;
-			activationBy="WEST";
-			interruptable=1;
-			age="UNKNOWN";
-			expActiv="setTimeMultiplier 1; JK_MissionStarted = true;";
-			class Effects
-			{
-			};
-		};
-		class Item1
 		{
 			position[]={8253.9219,296.04001,2090.0764};
 			a=5;

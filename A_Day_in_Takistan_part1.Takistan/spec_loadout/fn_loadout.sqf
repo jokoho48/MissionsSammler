@@ -43,17 +43,17 @@ if(_parameterCorrect) then {
 
         [_x, "rhs_uniform_mflora_patchless"] call Spec_fnc_addContainer;
         if(_type == _opl) then {
-            [_x, "rhs_vest_commander"] call Spec_fnc_addContainer;
+            [_x, "rhs_vest_commander", 1] call Spec_fnc_addContainer;
             _x addHeadgear "rhs_gssh18";
         } else {
             _x addHeadgear "rhs_fieldcap_ml";
             if(_type == _medic || _type == _medevac) then {
-                [_x, "rhs_6b23_ML_medic"] call Spec_fnc_addContainer;
+                [_x, "rhs_6sh46", 1] call Spec_fnc_addContainer;
             } else {
                 if(_type == _tf || _type == _sql) then {
-                    [_x, "rhs_6b23_ML_crewofficer"] call Spec_fnc_addContainer;
+                    [_x, "rhs_vydra_3m", 1] call Spec_fnc_addContainer;
                 } else {
-                    [_x, "rhs_6b23_ML_rifleman"] call Spec_fnc_addContainer;
+                    [_x, "rhs_vydra_3m", 1] call Spec_fnc_addContainer;
                 };
             };
         };

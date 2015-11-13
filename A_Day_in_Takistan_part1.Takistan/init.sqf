@@ -1,6 +1,15 @@
 enableSaving [false, false];
 
-["JK_AssignTFARFrequenzes", "OnRadiosReceived", compile preprocessFileLineNumbers "tfarSettings.sqf", player] call TFAR_fnc_addEventHandler;
+tf_radio_channel_name = "LaufendeMission";
+tf_radio_channel_password = "130";
+tf_no_auto_long_range_radio = true;
+tf_give_personal_radio_to_regular_soldier = false;
+TF_give_microdagr_to_soldier = false;
+tf_same_sw_frequencies_for_side = true;
+tf_same_lr_frequencies_for_side = true;
+tf_terrain_interception_coefficient = 7.0;
+_fnc_tfarSettings = compile preprocessFileLineNumbers "tfarSettings.sqf";
+["JK_AssignTFARFrequenzes", "OnRadiosReceived", _fnc_tfarSettings, player] call TFAR_fnc_addEventHandler;
 
 // We set the markers invisible (if you use more then 100 markers, then increase). Or delete if you want them visible
 for "_x" from 1 to 100 do {
@@ -75,42 +84,29 @@ if (isServer) then {
     };
 };
 call Spec_fnc_ki_init;
-[] spawn {
-    if (hasInterface) then {
-        waitUntil {!isNull player};
-        sleep 1;
-        JK_registerPlayer = player;
-        publicVariableServer "JK_registerPlayer";
-    } else {
-        "JK_registerPlayer" addPublicVariableEventHandler {
-            (owner _this select 1) publicVariableClient "JK_varHandle";
-        };
-    };
-};
 
 [10, 500, 10] spawn compile preprocessFileLineNumbers "JK_civilians.sqf";
 [5, 500, 1000] spawn compile preprocessFileLineNumbers "JK_traffic.sqf";
 
-
 if (isServer) then {
     Reim_fnc_crateFiller = compile preProcessFileLineNumbers "R_Crate\r_crate.sqf";
-[
     [
-        crate_a_1,
-        crate_a_2,
-        crate_a_3,
-        crate_a_4
-    ],
-    [
-        ["rhs_30Rnd_545x39_AK", 30],
-        ["rhs_100Rnd_762x54mmR_green", 5],
-        ["rhs_weap_rpg7", 1],
-        ["rhs_rpg7_PG7VL_mag", 4],
-        ["rhs_GRD40_White", 4],
-        ["rhs_GRD40_Red", 4],
-        ["rhs_VOG25", 12],
-        ["rhs_mag_rdg2_white", 12],
-        ["rhs_mag_rdg2_black", 6]
-    ]
-] call Reim_fnc_crateFiller;
+        [
+            crate_a_1,
+            crate_a_2,
+            crate_a_3,
+            crate_a_4
+        ],
+        [
+            ["rhs_30Rnd_762x39mm", 30],
+            ["rhs_100Rnd_762x54mmR_green", 5],
+            ["rhs_weap_rpg7", 1],
+            ["rhs_rpg7_PG7VL_mag", 4],
+            ["rhs_VG40OP_white", 4],
+            ["rhs_VG40OP_red", 4],
+            ["rhs_mag_rgd5", 12],
+            ["rhs_mag_nspn_red", 12],
+            ["rhs_mag_rdg2_black", 6]
+        ]
+    ] call Reim_fnc_crateFiller;
 };

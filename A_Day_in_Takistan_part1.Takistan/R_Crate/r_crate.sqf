@@ -1,11 +1,12 @@
 params ["_crates", "_content"];
 
 {
+    private "_crateObject";
     _crateObject = _x;
-    clearWeaponCargoGlobal _currentCrate;
-    clearMagazineCargoGlobal _currentCrate;
-    clearItemCargoGlobal _currentCrate;
-    clearBackpackCargoGlobal _currentCrate;
+    clearWeaponCargoGlobal _crateObject;
+    clearMagazineCargoGlobal _crateObject;
+    clearItemCargoGlobal _crateObject;
+    clearBackpackCargoGlobal _crateObject;
     {
         call {
             if ((_x select 0) isKindOf ["ItemCore", configFile >> "CfgWeapons"]) exitWith {

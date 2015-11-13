@@ -29,7 +29,7 @@ JK_fnc_buildTent = {
     private ["_position", "_JKtent", "_action"];
     (_this select 0) params ["_JKvehicle","_JKplayer"];
     _position = (getPos _JKvehicle) findEmptyPosition [5, 20, "MASH"];
-    if (_position isEqualTo []) exitWith {hint "Kein Platz zum Aufbauen eines Medizinieschen Notfallzeltes."};
+    if (_position isEqualTo []) exitWith {hint "Kein Platz zum Aufbauen eines medizinisches Notfallzeltes."};
     _JKtent = "MASH" createVehicle _position;
     _JKtent setdir (getDir _JKvehicle);
     _action = ["JK_BuildTent", "Zelt Abbauen", "", JK_fnc_destructTentProgressBar, JK_fnc_canBuildTent] call ace_interact_menu_fnc_createAction;
@@ -46,9 +46,9 @@ JK_fnc_buildTentProgressBar = {
     private "_position";
     params ["_JKvehicle"];
     _position = (getPos _JKvehicle) findEmptyPosition [5, 20, "MASH"];
-    if (_position isEqualTo []) exitWith {hint "Kein Platz zum Aufbauen eines Medizinieschen Notfallzeltes."};
+    if (_position isEqualTo []) exitWith {hint "Kein Platz zum Aufbauen eines medizinisches Notfallzeltes."};
     player playMove JK_BuildAnimation;
-    [JK_BuildTime, _this, JK_fnc_buildTent, {(_this select 0) select 1 switchMove ""}, "Baue Mediziniesches Zelt auf"] call ace_common_fnc_progressBar;
+    [JK_BuildTime, _this, JK_fnc_buildTent, {(_this select 0) select 1 switchMove ""}, "Baue medizinisches Zelt auf"] call ace_common_fnc_progressBar;
 };
 
 private "_action";
