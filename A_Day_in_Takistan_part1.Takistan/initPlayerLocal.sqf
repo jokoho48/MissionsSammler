@@ -61,8 +61,8 @@ _action = ["JK_BuildTent", "Baue Mediziniesches Zelt auf", "", JK_fnc_buildTentP
 
 call compile preprocessFileLineNumbers "fixXEH.sqf";
 
-TelePortFlag addAction ["Teleport Tent 1", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 0))}, [], 99, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', []])) >= 1"];
-TelePortFlag addAction ["Teleport Tent 2", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 1))}, [], 98, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', []])) == 2"];
+TelePortFlag addAction ["Teleport Tent 1", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 0)); call JK_MedicalMarker_fnc_hide;}, [], 99, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', []])) >= 1"];
+TelePortFlag addAction ["Teleport Tent 2", {(_this select 1) setPos (getPos ((JK_varHandle getVariable ["JK_tent", [player, player]]) select 1)); call JK_MedicalMarker_fnc_hide;}, [], 98, false, false, "", "(count (JK_varHandle getVariable ['JK_tent', []])) == 2"];
 
 JK_MedicalMarker = [];
 JK_MedicalMarker_fnc_show = {

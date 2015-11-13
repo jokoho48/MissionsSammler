@@ -8854,6 +8854,7 @@ class Mission
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
+			type="SWITCH";
 			age="UNKNOWN";
 			expCond="player in thisList && local player";
 			expActiv="call JK_MedicalMarker_fnc_show";
