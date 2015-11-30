@@ -7,7 +7,7 @@ if (_containerNumber == -1) then {
     if (_containerClassname isKindOf ["Uniform_Base", _cfg]) then {
         _containerNumber = 0;
     };
-    if (_containerClassname isKindOf ["Vest_NoCamo_Base", _cfg] && _containerClassname isKindOf ["Vest_Camo_Base", _cfg]) then {
+    if (_containerClassname isKindOf ["Vest_NoCamo_Base", _cfg] || _containerClassname isKindOf ["Vest_Camo_Base", _cfg]) then {
         _containerNumber = 1;
     };
     if (_containerClassname isKindOf "Bag_Base") then {

@@ -74,11 +74,11 @@ if(_parameterCorrect) then {
         _x linkItem "ItemMap";
         _x linkItem "ItemCompass";
         _x linkItem "ItemWatch";
-        _x linkItem "tf_anprc152";
 
         if(_type == _opl || _type == _tf || _type == _sql) then {
             for "_i" from 1 to 2 do {[_x,"ACE_CableTie",1] call Spec_fnc_addItemToContainer;};
             [_x, "ACE_Flashlight_KSF1",0] call Spec_fnc_addItemToContainer;
+            _x linkItem "tf_anprc152";
         };
 
         comment "standard equipment (ear plugs, grenades)";
