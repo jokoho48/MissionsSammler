@@ -1,6 +1,4 @@
 ["moerser1", {
-
-
     {
         playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", _x, false, getPosASL _x, 1, 1, 300]
     } count [Sound1, Sound2, Sound3];
