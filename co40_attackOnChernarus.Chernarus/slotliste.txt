@@ -1,0 +1,53 @@
+1. OPL
+2. Funker
+
+3. Squad Leader
+4. Ersthelfer
+
+5. Team Leader
+6. Soldat
+7. Soldat
+8. Soldat
+
+9. Team Leader
+10. Soldat
+11. Soldat
+12. Soldat
+
+13. Squad Leader
+14. Ersthelfer
+
+15. Team Leader
+16. Soldat
+17. Soldat
+18. Soldat
+
+19. Team Leader
+20. Soldat
+21. Soldat
+22. Soldat
+
+23. Squad Leader
+24. Ersthelfer
+
+25. Team Leader
+26. Soldat
+27. Soldat
+28. Soldat
+
+29. Team Leader
+30. Soldat
+31. Soldat
+32. Soldat
+
+
+33. Logistik Koorinator
+34. Logistiker
+35. Logistiker
+
+36. Sanitäter Team Leader
+37. Sanitäter
+
+38. Mörser Team Leader
+39. Mörser Team
+40. Mörser Team

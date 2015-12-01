@@ -37,8 +37,12 @@
     };
 
 
-    if () then {
-
+    if (isServer && {typeName _target == "BOOL" && {!_target}}) then {
+        if (_eventCall == 0) then {
+            _eventParameter call _eventCode;
+        } else {
+            _eventParameter spawn _eventCode;
+        };
     } else {
         // Call Code with BIS_fnc_MP @todo(Update to remoteExec)
         if (_eventCall == 0) then {

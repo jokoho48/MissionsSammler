@@ -59,7 +59,7 @@ if (typeName (_unitsA select 0) == "STRING") then {
     _unitsA params ["_units", "_veh"];
     _veh createVehicle _spawnP;
     _grp1 = [_spawnP, _side, _units, [], [], _spawnSkill] call BIS_fnc_spawnGroup;
-    {_x getIn _veh} count (units _grp1);
+    {_x moveInAny _veh} count (units _grp1);
 };
 
 switch (toUpper _handler) do {
