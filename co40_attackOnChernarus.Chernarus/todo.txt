@@ -1,0 +1,8 @@
+1. Mörser Event Schreiben
+2. Parajumper Script finden/Schreiben
+3. Einheiten Platzieren
+4. Loadouts machen
+5. Angriff Gruppen zusammen stellen
+6. 2te angriffsstelle ausbauen
+7. Crate Filler
+8. Plot Twist Bauen(UI Reimchen Fragen)
