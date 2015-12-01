@@ -5,7 +5,6 @@ class JK_Core {
         class addVariableEventHandler;
         class crate;
         class initVaraibleEventHandler {preInit = 1;};
-        class addMissionEvent;
         class triggerMissionEventhandler;
     };
 };

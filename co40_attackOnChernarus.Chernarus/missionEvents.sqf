@@ -1,4 +1,10 @@
 ["moerser1", {
+
+
+    {
+        playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", _x, false, getPosASL _x, 1, 1, 300]
+    } count [Sound1, Sound2, Sound3];
+    sleep 5;
     for "_x" from 1 to 6 do {
         private ["_pos", "_veh"];
         _pos = getMarkerPos format ["moerser_%1",_x];

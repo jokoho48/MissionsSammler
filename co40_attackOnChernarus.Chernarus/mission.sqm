@@ -1317,7 +1317,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=353;
+		items=357;
 		class Item0
 		{
 			position[]={1979.52,0.045272801,4391.8101};
@@ -3186,6 +3186,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Loudspeakers_F";
 			skill=0.60000002;
+			text="Sound1";
 			init="if (isServer) then {this enableSimulationGlobal false;};";
 		};
 		class Item172
@@ -5104,6 +5105,50 @@ class Mission
 			side="EMPTY";
 			vehicle="RHS_Ural_Fuel_VV_01";
 			skill=0.60000002;
+			init="if (isServer) then {this enableSimulationGlobal false;};";
+		};
+		class Item353
+		{
+			position[]={2774.4692,209.0015,5386.0952};
+			azimut=307;
+			id=366;
+			side="EMPTY";
+			vehicle="Land_Loudspeakers_F";
+			skill=0.60000002;
+			text="Sound2";
+			init="if (isServer) then {this enableSimulationGlobal false;};";
+		};
+		class Item354
+		{
+			position[]={2758.23,208.66232,5335.8574};
+			azimut=307;
+			id=367;
+			side="EMPTY";
+			vehicle="Land_Loudspeakers_F";
+			skill=0.60000002;
+			text="Sound3";
+			init="if (isServer) then {this enableSimulationGlobal false;};";
+		};
+		class Item355
+		{
+			position[]={2776.7549,207.3456,5217.8843};
+			azimut=307;
+			id=368;
+			side="EMPTY";
+			vehicle="Land_Loudspeakers_F";
+			skill=0.60000002;
+			text="Sound3_1";
+			init="if (isServer) then {this enableSimulationGlobal false;};";
+		};
+		class Item356
+		{
+			position[]={2647.9968,193.99001,5105.3179};
+			azimut=307;
+			id=369;
+			side="EMPTY";
+			vehicle="Land_Loudspeakers_F";
+			skill=0.60000002;
+			text="Sound3_2";
 			init="if (isServer) then {this enableSimulationGlobal false;};";
 		};
 	};
