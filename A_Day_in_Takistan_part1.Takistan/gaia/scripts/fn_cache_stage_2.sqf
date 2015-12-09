@@ -84,9 +84,6 @@ missionNamespace setVariable [_var2, _sf ];
 
 {deleteVehicle _x;} count units _group;
 {
-	{
-		deleteVehicle _x;
-	} count (_x getVariable ["ace_cargo_loaded", []]);
 	deleteVehicle _x;
 	nil
 } count _vehicles;

@@ -157,9 +157,6 @@ JK_deleteCars = {
             };
 
             JK_carsArray = JK_carsArray - [_car];
-            {
-                deleteVehicle _x;
-            } count (_car getVariable ["ace_cargo_loaded", []]);
             deleteVehicle _car;
         };
     } count JK_carsArray;
