@@ -10,7 +10,7 @@ disabledAI = 1;
 class Header {
 	gameType = "coop";
 	minPlayers = "1";
-	maxPlayers = "25";
+	maxPlayers = "50";
 };
 
 OnLoadMissionTime = true;

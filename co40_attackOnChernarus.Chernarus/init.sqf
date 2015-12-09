@@ -16,8 +16,8 @@ missionNameSpace setVariable ["JK_SPZ", [["rhsusf_army_ucp_driver","rhsusf_army_
 missionNameSpace setVariable ["JK_KPZ", [["rhsusf_army_ucp_driver","rhsusf_army_ucp_driver","rhsusf_army_ucp_driver"], "rhsusf_m1a2sep1tuskiiwd_usarmy"]];
 
 // Own Reinforcement
-missionNameSpace setVariable ["JK_groupRU1", []];
-missionNameSpace setVariable ["JK_groupRU2", []];
+missionNameSpace setVariable ["JK_groupRU1", [["rhs_msv_emr_sergeant", "rhs_msv_emr_junior_sergeant", "rhs_msv_emr_grenadier", "rhs_msv_emr_rifleman", "rhs_msv_emr_machinegunner", "rhs_msv_emr_at", "rhs_msv_emr_strelok_rpg_assist", "rhs_msv_emr_medic"], "rhs_gaz66_msv"]];
 
 // create all Mission Events
 call compile preprocessFileLineNumbers "missionEvents.sqf";
+call compile preprocessFileLineNumbers "fixXEH.sqf";

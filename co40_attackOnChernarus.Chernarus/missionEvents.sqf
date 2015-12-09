@@ -1,3 +1,28 @@
+["deleteLog", {
+    {
+        private _vehicle = _x;
+        private _crew = crew _x;
+        {
+            _vehicle deleteVehicleCrew _x;
+            nil
+        } count _crew;
+        deleteVehicle _vehicle;
+        nil
+    } count [Log1, Log2, Log3];
+}, [], 1] call JK_Core_fnc_addMissionEvent;
+
+["Attack1", {
+
+
+
+
+
+
+
+
+}, [], 1] call JK_Core_fnc_addMissionEvent;
+
+
 ["moerser1", {
     {
         playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", _x, false, getPosASL _x, 1, 1, 300]
@@ -28,4 +53,4 @@
         };
         sleep 5 + (random 5);
     };
-}, 1] call JK_Core_fnc_addMissionEvent;
+}, [], 1] call JK_Core_fnc_addMissionEvent;

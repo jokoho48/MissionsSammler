@@ -14,14 +14,14 @@
 
 {
     private ["_eventCode","_eventVariable"];
-    params ["_eventName", "_target"];
+    _x params ["_eventName", "_target"];
     // get Event Content
     _eventVariable = missionNamespace getVariable [_eventName, [{ hint "Error Event Not Found"; },[],0]];
 
     _eventVariable params ["_eventFunction","_eventParameter","_eventCall","_times"];
     _eventCode = {};
     // Check if Count for Execute
-    if !(_times == 0) exitWith {};
+    if (_times == 0) exitWith {};
 
     _times = _times - 1;
     //Debug

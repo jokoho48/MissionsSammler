@@ -26,3 +26,15 @@ TTT_Grau3_Bw_Flecktarn
 TTT_Grau4_Bw_Flecktarn
 TTT_Grau5_Bw_Flecktarn
 TTT_Grau6_Bw_Flecktarn
+
+
+
+
+rhs_msv_emr_sergeant
+rhs_msv_emr_junior_sergeant
+rhs_msv_emr_grenadier
+rhs_msv_emr_rifleman
+rhs_msv_emr_machinegunner
+rhs_msv_emr_at
+rhs_msv_emr_strelok_rpg_assist
+rhs_msv_emr_medic
