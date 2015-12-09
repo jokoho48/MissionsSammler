@@ -13,7 +13,7 @@ class CfgFunctions {
 class Header {
 	gameType = "coop";
 	minPlayers = "1";
-	maxPlayers = "25";
+	maxPlayers = "30";
 };
 
 OnLoadMissionTime = true;
