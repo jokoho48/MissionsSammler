@@ -24,16 +24,17 @@ params [
     ["_Settings", []],
     ["_spawnSkill", "NORMAL", ["", []]]
 ];
+_grp1 = grpNull;
 
 if (ISSTRING(_spawnSkill)) then {
-    _spawnSkill = switch (toUpper _skill) do {
+    _spawnSkill = switch (toUpper _spawnSkill) do {
         case ("EASY"): {[0.2,0.4,0.3]};
         case ("NORMAL"): {[0.4,0.6,0.5]};
         case ("HARD"): {[0.7,1,0.8]};
         default {[0.4,0.6,0.5]};
     };
 };
-if (dISARRAY(_spwnP)) then {
+if !(dISARRAY(_spawnP)) then {
     if (ISSTRING(_spawnP)) then {
         _spawnP = getMarkerPos _pos;
     } else {
@@ -50,6 +51,7 @@ if !(dISARRAY(_target)) then {
     };
 };
 _target set [2, 0];
+
 if (ISSTRING(_unitsA)) then {
     _unitsA = missionNamespace getVariable _unitsA;
 };
