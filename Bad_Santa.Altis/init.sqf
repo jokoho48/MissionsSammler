@@ -2,6 +2,8 @@ enableSaving [false,false];
 JK_allSpawns = ["spawn_1", "spawn_2", "spawn_3", "spawn_4", "spawn_5", "spawn_6", "spawn_7", "spawn_8"];
 JK_allTagets = ["target_1", "target_2", "target_3", "target_4", "target_5"];
 JK_allWeapon = ["LMG_Zafir_F", "arifle_TRG21_F", "arifle_TRG20_F", "arifle_Mk20_F", "arifle_Mk20_plain_F", "arifle_Mk20C_F", "arifle_Mk20C_plain_F", "arifle_Katiba_F", "arifle_Katiba_C_F"];
+JK_count = 5;
+JK_isInLoop = false;
 JK_fnc_unitInit = {
     params ["_unit"];
     _unit removeMagazines "xmas_explosive_present";
@@ -16,35 +18,47 @@ JK_fnc_spawnUnits = {
 };
 
 JK_fnc_loop = {
-    if (count allUnits >= 200) exitWith {};
-    private _grp = createGroup EAST;
-    private _pos = JK_allSpawns call BIS_fnc_selectRandom;
-    _pos = getMarkerPos _pos;
-    for "_i" from 0 to JK_count step 1 do {
-        [_grp, "xmas_santa_opfor", _pos] call JK_fnc_spawnUnits;
+    if (JK_isInLoop) exitWith {};
+    0 spawn {
+        JK_isInLoop = true;
+        if (count (allUnits - allPlayers) >= 200) exitWith {};
+        private _allreadyUsedPos = [];
+        for "_j" from 0 to JK_count step 1 do {
+        if (count (allUnits - allPlayers) >= 200) exitWith {};
+            private _grp = createGroup EAST;
+            private _pos = JK_allSpawns call BIS_fnc_selectRandom;
+            _allreadyUsedPos pushBack _pos;
+            _pos = getMarkerPos _pos;
+            for "_i" from 0 to 5 step 1 do {
+                [_grp, "xmas_santa_opfor", _pos] call JK_fnc_spawnUnits;
+            };
+            private _posWP = JK_allTagets call BIS_fnc_selectRandom;
+            _posWP = getMarkerPos _posWP;
+            [_grp, _posWP, 100] call CBA_fnc_taskAttack;
+        };
+        if !(count (allUnits - allPlayers) >= 200) then {
+            JK_count = JK_count + (floor(random 3) min 1);
+        };
+        {
+            _x addCuratorEditableObjects [allUnits, true];
+            true
+        } count allCurators;
+        {
+            _x addCuratorEditableObjects [vehicles, true];
+            true
+        } count allCurators;
+        {
+            _x addCuratorEditableObjects [allDead, true];
+            true
+        } count allCurators;
+        JK_isInLoop = false;
     };
-    private _posWP = JK_allTagets call BIS_fnc_selectRandom;
-    _posWP = getMarkerPos _posWP;
-    private _wp = _grp addWaypoint [_posWP, 5];
-    _wp setWaypointBehaviour "COMBAT";
-    _wp setWaypointSpeed "FULL";
-    JK_count = JK_count + floor(random 3);
-    {
-        _x addCuratorEditableObjects [allUnits, true];
-        true
-    } count allCurators;
-    {
-        _x addCuratorEditableObjects [vehicles, true];
-        true
-    } count allCurators;
-    {
-        _x addCuratorEditableObjects [allDead, true];
-        true
-    } count allCurators;
 };
 
-JK_count = 5;
-[JK_fnc_loop, 300, []]call CBA_fnc_addPerFrameHandler;
+if (isServer) then {
+    [JK_fnc_loop, 300, []]call CBA_fnc_addPerFrameHandler;
+};
+
 
 finishMissionInit;
 /*
