@@ -5,7 +5,7 @@ enableDebugConsole = 1;
 respawnDialog = 0;
 respawn = "BASE";
 respawndelay=15;
-disabledAI = 1;
+disabledAI = 0;
 
 class Header {
     gameType = "coop";
@@ -14,3 +14,12 @@ class Header {
 };
 
 OnLoadMissionTime = true;
+
+class CfgSounds {
+    sounds[] = {"Intro"};
+    class Intro {
+        name = "Intro";
+        sound[] = {"\music\JingleBells.ogg", 0.8, 1};
+        titles[] = {0,""};
+    };
+};
