@@ -5,12 +5,18 @@ class Mission
 	{
 		"a3_map_altis",
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f"
+		"a3_characters_f",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Soft_F_Offroad_01"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Soft_F_Offroad_01",
 		"a3_map_altis"
 	};
 	randomSeed=8857456;
@@ -34,7 +40,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			side="WEST";
@@ -43,16 +49,178 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14626.748,17.91,16771.6};
-					azimut=130.88351;
+					position[]={12805.588,87.713081,16666.018};
+					azimut=130.884;
 					id=0;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_soldier_LAT_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
+					text="z1";
 				};
 			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12591.958,46.500881,16656.416};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="z1";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=1;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={12807.524,87.69252,16662.232};
+			azimut=130.884;
+			id=2;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			leader=1;
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=15;
+		class Item0
+		{
+			position[]={12891.925,83.665085,16758.063};
+			name="target_1";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={12870.975,87.019066,16706.818};
+			name="target_2";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={12808.122,87.635597,16653.59};
+			name="target_3";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={12802.177,85.881706,16729.75};
+			name="target_4";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={12853.138,85.230392,16758.063};
+			name="target_5";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={11835.781,47.717365,18315.867};
+			name="spawn_1";
+			type="Empty";
+		};
+		class Item6
+		{
+			position[]={11225.939,71.876068,16644.098};
+			name="spawn_2";
+			type="Empty";
+		};
+		class Item7
+		{
+			position[]={12184.313,31.109282,15144.18};
+			name="spawn_3";
+			type="Empty";
+		};
+		class Item8
+		{
+			position[]={13134.601,15.356635,15192.502};
+			name="spawn_4";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={14353.67,18.591555,17435.189};
+			name="spawn_5";
+			type="Empty";
+		};
+		class Item10
+		{
+			position[]={14032.487,14.939013,17910.215};
+			name="spawn_6";
+			type="Empty";
+		};
+		class Item11
+		{
+			position[]={14356.094,16.585285,17192.293};
+			name="spawn_7";
+			type="Empty";
+		};
+		class Item12
+		{
+			position[]={13454.829,17.559439,18272.295};
+			name="spawn_8";
+			type="Empty";
+		};
+		class Item13
+		{
+			position[]={12841.437,90.98925,16680.658};
+			name="Area";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorWEST";
+			a=150;
+			b=150;
+		};
+		class Item14
+		{
+			position[]={12786.885,81.248055,16759.447};
+			name="ViewDistance";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=1500;
+			b=1500;
 		};
 	};
 };
