@@ -4,7 +4,7 @@ OnLoadMission = "";
 enableDebugConsole = 1;
 respawnDialog = 0;
 respawn = "BASE";
-respawndelay=20;
+respawndelay = 20;
 disabledAI = 0;
 
 class Header {

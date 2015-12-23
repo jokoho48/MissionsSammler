@@ -4,8 +4,9 @@ enableSaving [false,false];
 JK_allSpawns = ["spawn_1", "spawn_2", "spawn_3", "spawn_4", "spawn_5", "spawn_6", "spawn_7", "spawn_8"];
 JK_allTagets = ["target_1", "target_2", "target_3", "target_4", "target_5"];
 JK_allWeapon = ["LMG_Zafir_F", "arifle_TRG21_F", "arifle_TRG20_F", "arifle_Mk20_F", "arifle_Mk20_plain_F", "arifle_Mk20C_F", "arifle_Mk20C_plain_F", "arifle_Katiba_F", "arifle_Katiba_C_F"];
-JK_count = 5;
-JK_maxCount = 200000;
+JK_count = 2;
+JK_playMusic = false;
+JK_maxCount = 250;
 JK_isInLoop = false;
 JK_fnc_unitInit = {
     params ["_unit"];
@@ -37,10 +38,10 @@ JK_fnc_loop = {
             };
             private _posWP = JK_allTagets call BIS_fnc_selectRandom;
             _posWP = getMarkerPos _posWP;
-            [_grp, _posWP, 100] call CBA_fnc_taskAttack;
+            [_grp, _posWP, 50, "MOVE", "AWARE", "YELLOW", "FULL", "STAG COLUMN", "this spawn CBA_fnc_searchNearby", [3,6,9]] call CBA_fnc_addWaypoint
         };
         if !(count (allUnits - allPlayers) >= JK_maxCount) then {
-            JK_count = JK_count + (floor (((random 3) min 1) max 2));
+            JK_count = JK_count + 1;
         };
         {
             _x addCuratorEditableObjects [allUnits, true];
@@ -59,7 +60,7 @@ JK_fnc_loop = {
 };
 
 if (isServer) then {
-    [JK_fnc_loop, 300, []]call CBA_fnc_addPerFrameHandler;
+    [JK_fnc_loop, 600, []]call CBA_fnc_addPerFrameHandler;
 };
 
 
@@ -69,5 +70,13 @@ waitUntil {!isNil "AME_Core_fnc_loadModules"};
 ["Core", "LoadOut", "Crates", "Environment", "Grenades", "TFAR", "GarbageCollect", "Zeus"] call AME_Core_fnc_loadModules;
 
 if (hasInterface) then {
-    soundPoint say3D "Intro";
+    [] spawn {
+        waitUntil {!isNull (findDisplay 46)};
+        while {true} do {
+            if (JK_playMusic) then {
+                soundPoint say3D "Intro";
+                JK_playMusic = false;
+            };
+        };
+    };
 };

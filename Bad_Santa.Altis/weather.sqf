@@ -66,7 +66,7 @@ private _obj = player;
 private _pos = position (vehicle _obj);
 
 private _d = 15;
-private _h = 12;
+private _h = 30;
 private _h1 = 8;
 private _h2 = 4;
 private _density = 20000;
@@ -110,18 +110,17 @@ while {true} do {
         _fog2 setpos _pos;
         _fog3 setpos _pos;
         0 setRain 0;
-
         _dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h)];
-        drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
+        drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,0.7], [1,1,1,0.7], [1,1,1,0.7]], [0,0], 0.2, 1.2, "", "", ""];
 
 
         _dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h1)];
-        drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
+        drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,0.7], [1,1,1,0.7], [1,1,1,0.7]], [0,0], 0.2, 1.2, "", "", ""];
 
 
         _dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
-        drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,1], [1,1,1,1], [1,1,1,1]], [0,0], 0.2, 1.2, "", "", ""];
+        drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,0.7], [1,1,1,0.7], [1,1,1,0.7]], [0,0], 0.2, 1.2, "", "", ""];
         _a = _a + 1;
     };
-    sleep 0.2;
+    sleep 1;
 };

@@ -1515,7 +1515,7 @@ class Mission
 		};
 		class Item12
 		{
-			position[]={12841.437,90.98925,16680.658};
+			position[]={12836.472,89.522575,16691.695};
 			name="Area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -1525,7 +1525,7 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={12786.885,81.248055,16759.447};
+			position[]={12836.472,89.522575,16691.695};
 			name="ViewDistance";
 			markerType="ELLIPSE";
 			type="Empty";
