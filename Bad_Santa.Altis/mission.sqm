@@ -89,7 +89,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			side="LOGIC";
@@ -1424,6 +1424,96 @@ class Mission
 				};
 			};
 		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={12799.607,87.547165,16646.037};
+					id=65;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={12797.399,87.5037,16644.154};
+					id=66;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={12795.999,87.471962,16642.854};
+					id=67;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={12797.401,87.472206,16642.045};
+					id=68;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item4
+				{
+					position[]={12798.759,87.491188,16643.096};
+					id=69;
+					side="WEST";
+					vehicle="B_soldier_M_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item5
+				{
+					position[]={12802.016,87.523117,16644.232};
+					id=70;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item6
+				{
+					position[]={12800.614,87.498009,16642.932};
+					id=71;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item7
+				{
+					position[]={12802.017,87.496925,16642.123};
+					id=72;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item8
+				{
+					position[]={12803.374,87.511322,16643.174};
+					id=73;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1431,7 +1521,7 @@ class Mission
 		class Item0
 		{
 			position[]={12832.863,87.452019,16698.996};
-			id=65;
+			id=74;
 			side="EMPTY";
 			vehicle="Land_Loudspeakers_F";
 			skill=0.60000002;

@@ -38,7 +38,7 @@ JK_fnc_loop = {
             };
             private _posWP = JK_allTagets call BIS_fnc_selectRandom;
             _posWP = getMarkerPos _posWP;
-            [_grp, _posWP, 50, "MOVE", "AWARE", "YELLOW", "FULL", "STAG COLUMN", "this spawn CBA_fnc_searchNearby", [3,6,9]] call CBA_fnc_addWaypoint
+            [_grp, _posWP, 50, "MOVE", "AWARE", "YELLOW", "FULL", "STAG COLUMN", "this spawn CBA_fnc_searchNearby", [3,6,9]] call CBA_fnc_addWaypoint;
         };
         if !(count (allUnits - allPlayers) >= JK_maxCount) then {
             JK_count = JK_count + 1;

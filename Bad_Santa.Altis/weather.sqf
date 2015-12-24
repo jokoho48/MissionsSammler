@@ -1,30 +1,38 @@
+waitUntil {!isNull (findDisplay 46)};
+
 "filmGrain" ppEffectEnable true;
 "filmGrain" ppEffectAdjust [0.02, 1, 1, 0.1, 1, false];
 "filmGrain" ppEffectCommit 5;
 
 setviewdistance 1000;
-bis_fog = 0.3;
 
 setObjectViewDistance [1000, 1000];
+
+
+if (isServer) exitWith {
+    [] spawn {
+        0 setFog [0.08, 0.02, 120];
+    };
+};
+
 0 setovercast 0.9;
 0 setrain 1;
-//0 setfog 0.8;
-0 setfog bis_fog;
+
 JK_hndl = ppEffectCreate ["colorCorrections", 1501];
 JK_hndl ppEffectEnable true;
-JK_hndl ppEffectAdjust [1.0, 1.0, 0.0, [.3, .3, 1.0, .1], [.88, .88, .93, .45], [1 , 1, 1, 0.03]];
+JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
 JK_hndl ppEffectCommit 0;
 
 [] spawn {
     private _delay = 3;
     sleep 0.01;
     while {true} do {
-        _delay setovercast 0.9;
-        _delay setrain 1;
         _delay setfog bis_fog;
+        _delay setOvercast 0.9
         JK_hndl ppEffectEnable true;
-        JK_hndl ppEffectAdjust [1.0, 1.0, 0.0, [.3, .3, 1.0, .1], [.88, .88, .93, .45], [1 , 1, 1, 0.03]];
+        JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
         JK_hndl ppEffectCommit _delay;
+
         sleep _delay;
     };
 };
@@ -35,7 +43,7 @@ JK_hndl ppEffectCommit 0;
     setwind [0.201112,0.204166,true];
     while {true} do {
         private _ran = ceil random 5;
-        //playsound format ["wind_%1",_ran];
+        playsound format ["wind%1",_ran];
         private _obj = vehicle player;
         private _pos = position _obj;
 
