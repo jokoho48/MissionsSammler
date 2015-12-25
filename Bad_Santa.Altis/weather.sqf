@@ -8,31 +8,28 @@ setviewdistance 1000;
 
 setObjectViewDistance [1000, 1000];
 
+0 setovercast 0.6;
+0 setrain 0;
 
-if (isServer) exitWith {
-    [] spawn {
-        0 setFog [0.08, 0.02, 120];
-    };
+if (hasInterface) then {
+    JK_hndl = ppEffectCreate ["colorCorrections", 1501];
+    JK_hndl ppEffectEnable true;
+    JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
+    JK_hndl ppEffectCommit 0;
 };
 
-0 setovercast 0.9;
-0 setrain 1;
-
-JK_hndl = ppEffectCreate ["colorCorrections", 1501];
-JK_hndl ppEffectEnable true;
-JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
-JK_hndl ppEffectCommit 0;
-
 [] spawn {
-    private _delay = 3;
+    private _delay = 10;
     sleep 0.01;
     while {true} do {
-        _delay setfog bis_fog;
-        _delay setOvercast 0.9
-        JK_hndl ppEffectEnable true;
-        JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
-        JK_hndl ppEffectCommit _delay;
-
+        _delay setFog [0.08, 0.02, 120];
+        0 setrain 0;
+        0 setovercast 0.6;
+        if (hasInterface) then {
+            JK_hndl ppEffectEnable true;
+            JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
+            JK_hndl ppEffectCommit _delay;
+        };
         sleep _delay;
     };
 };
@@ -48,7 +45,6 @@ JK_hndl ppEffectCommit 0;
         private _pos = position _obj;
 
         //--- Dust
-        setwind [0.201112*2,0.204166*2,false];
         private _velocity = [random 10,random 10,-1];
         private _color = [1.0, 0.9, 0.8];
         private _alpha = 0.02 + random 0.02;
@@ -56,7 +52,7 @@ JK_hndl ppEffectCommit 0;
         _ps setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 8], "", "Billboard", 1, 3, [0, 0, -6], _velocity, 1, 1.275, 1, 0, [9], [_color + [0], _color + [_alpha], _color + [0]], [1000], 1, 0, "", "", _obj];
         _ps setParticleRandom [3, [30, 30, 0], [0, 0, 0], 1, 0, [0, 0, 0, 0.01], 0, 0];
         _ps setParticleCircle [0.1, [0, 0, 0]];
-        _ps setDropInterval 0.01;
+        _ps setDropInterval 0.002;
 
         sleep (random 1);
         deletevehicle _ps;
@@ -66,8 +62,6 @@ JK_hndl ppEffectCommit 0;
 };
 
 //Snow script
-
-setWind [0, -5, true];
 
 private _obj = player;
 
@@ -87,7 +81,7 @@ _fog1 setParticleParams [
 ];
 _fog1 setParticleRandom [3, [55, 55, 0.2], [0, 0, -0.1], 2, 0.45, [0, 0, 0, 0.1], 0, 0];
 _fog1 setParticleCircle [0.001, [0, 0, -0.12]];
-_fog1 setDropInterval 0.01;
+_fog1 setDropInterval 0.002;
 
 private _fog2 = "#particlesource" createVehicleLocal _pos;
 _fog2 setParticleParams [
@@ -97,7 +91,7 @@ _fog2 setParticleParams [
 ];
 _fog2 setParticleRandom [3, [55, 55, 0.2], [0, 0, -0.1], 2, 0.45, [0, 0, 0, 0.1], 0, 0];
 _fog2 setParticleCircle [0.001, [0, 0, -0.12]];
-_fog2 setDropInterval 0.01;
+_fog2 setDropInterval 0.002;
 
 private _fog3 = "#particlesource" createVehicleLocal _pos;
     _fog3 setParticleParams [
@@ -107,7 +101,7 @@ private _fog3 = "#particlesource" createVehicleLocal _pos;
 ];
 _fog3 setParticleRandom [3, [55, 55, 0.2], [0, 0, -0.1], 2, 0.45, [0, 0, 0, 0.1], 0, 0];
 _fog3 setParticleCircle [0.001, [0, 0, -0.12]];
-_fog3 setDropInterval 0.01;
+_fog3 setDropInterval 0.002;
 
 
 while {true} do {

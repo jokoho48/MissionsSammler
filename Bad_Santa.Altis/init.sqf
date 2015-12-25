@@ -60,14 +60,14 @@ JK_fnc_loop = {
 };
 
 if (isServer) then {
-    [JK_fnc_loop, 600, []]call CBA_fnc_addPerFrameHandler;
+    [JK_fnc_loop, 600, []] call CBA_fnc_addPerFrameHandler;
 };
 
 
 finishMissionInit;
 
 waitUntil {!isNil "AME_Core_fnc_loadModules"};
-["Core", "LoadOut", "Crates", "Environment", "Grenades", "TFAR", "GarbageCollect", "Zeus"] call AME_Core_fnc_loadModules;
+["Core", "LoadOut", "Crates", "Environment", /*"Grenades", */"TFAR", "GarbageCollect", "Zeus"] call AME_Core_fnc_loadModules;
 
 if (hasInterface) then {
     [] spawn {

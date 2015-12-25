@@ -5,7 +5,7 @@ enableDebugConsole = 1;
 respawnDialog = 0;
 respawn = "BASE";
 respawndelay = 20;
-disabledAI = 0;
+disabledAI = 1;
 
 class Header {
     gameType = "coop";
@@ -23,3 +23,13 @@ class CfgSounds {
         titles[] = {0,""};
     };
 };
+
+corpseManagerMode = 1;
+corpseLimit = 10;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 600;
+
+wreckManagerMode = 1;
+wreckLimit = 5;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 900;
