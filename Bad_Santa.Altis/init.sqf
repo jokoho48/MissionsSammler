@@ -1,6 +1,5 @@
 setviewdistance 1000;
 enableSaving [false,false];
-[] spawn compile preprocessFileLineNumbers "weather.sqf";
 JK_allSpawns = ["spawn_1", "spawn_2", "spawn_3", "spawn_4", "spawn_5", "spawn_6", "spawn_7", "spawn_8"];
 JK_allTagets = ["target_1", "target_2", "target_3", "target_4", "target_5"];
 JK_allWeapon = ["LMG_Zafir_F", "arifle_TRG21_F", "arifle_TRG20_F", "arifle_Mk20_F", "arifle_Mk20_plain_F", "arifle_Mk20C_F", "arifle_Mk20C_plain_F", "arifle_Katiba_F", "arifle_Katiba_C_F"];
@@ -40,9 +39,6 @@ JK_fnc_loop = {
             _posWP = getMarkerPos _posWP;
             [_grp, _posWP, 50, "MOVE", "AWARE", "YELLOW", "FULL", "STAG COLUMN", "this spawn CBA_fnc_searchNearby", [3,6,9]] call CBA_fnc_addWaypoint;
         };
-        if !(count (allUnits - allPlayers) >= JK_maxCount) then {
-            JK_count = JK_count + 1;
-        };
         {
             _x addCuratorEditableObjects [allUnits, true];
             true
@@ -56,18 +52,25 @@ JK_fnc_loop = {
             true
         } count allCurators;
         JK_isInLoop = false;
+        if !(count (allUnits - allPlayers) >= JK_maxCount) then {
+            JK_count = JK_count + 1;
+            publicVariable "JK_count";
+        };
     };
 };
 
-if (isServer) then {
-    [JK_fnc_loop, 600, []] call CBA_fnc_addPerFrameHandler;
+if (!isServer && !hasInterface) then {
+    if ((paramsArray select 0) isEqualTo 1) then {
+        [JK_fnc_loop, 600, []] call CBA_fnc_addPerFrameHandler;
+    };
 };
-
 
 finishMissionInit;
 
 waitUntil {!isNil "AME_Core_fnc_loadModules"};
 ["Core", "LoadOut", "Crates", "Environment", /*"Grenades", */"TFAR", "GarbageCollect", "Zeus"] call AME_Core_fnc_loadModules;
+
+[] spawn compile preprocessFileLineNumbers "weather.sqf";
 
 if (hasInterface) then {
     [] spawn {
@@ -76,6 +79,8 @@ if (hasInterface) then {
             if (JK_playMusic) then {
                 soundPoint say3D "Intro";
                 JK_playMusic = false;
+                publicVariable "JK_playMusic";
+                sleep 400;
             };
         };
     };

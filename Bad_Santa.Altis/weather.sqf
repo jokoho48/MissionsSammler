@@ -66,7 +66,7 @@ if (hasInterface) then {
 private _obj = player;
 
 private _pos = position (vehicle _obj);
-
+_pos set [2, 0];
 private _d = 15;
 private _h = 30;
 private _h1 = 8;
@@ -106,21 +106,23 @@ _fog3 setDropInterval 0.002;
 
 while {true} do {
     private _a = 0;
-    while { _a < _density } do {
-        private _pos = getPos player;
-        _fog1 setpos _pos;
-        _fog2 setpos _pos;
-        _fog3 setpos _pos;
+    private _pos = getPos player;
+    _pos set [2, 0];
+    _fog1 setpos _pos;
+    _fog2 setpos _pos;
+    _fog3 setpos _pos;
+    for "_i" from 0 to _density step 1 do {
+        private _pos = getPosATL player;
         0 setRain 0;
-        _dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h)];
+        _pos params ["_posX", "_posY", "_posZ"];
+        private _playerVelocity = (velocity (vehicle player)) select 0;
+        private _dpos = [(_posX + (_d - (random(2 * _d))) + (_playerVelocity * 1)), (_posY + (_d - (random (2*_d))) + (_playerVelocity*1)),(_posZ + _h)];
         drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,0.7], [1,1,1,0.7], [1,1,1,0.7]], [0,0], 0.2, 1.2, "", "", ""];
 
-
-        _dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h1)];
+        _dpos = [(_posX + (_d - (random (2*_d))) + (_playerVelocity * 1)),(_posY + (_d - (random (2*_d))) + (_playerVelocity * 1)),(_posZ + _h1)];
         drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,0.7], [1,1,1,0.7], [1,1,1,0.7]], [0,0], 0.2, 1.2, "", "", ""];
 
-
-        _dpos = [((_pos select 0) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 1) + (_d - (random (2*_d))) + ((velocity vehicle player select 0)*1)),((_pos select 2) + _h2)];
+        _dpos = [(_posX + (_d - (random (2*_d))) + (_playerVelocity * 1)),(_posY + (_d - (random (2*_d))) + (_playerVelocity * 1)),(_posZ + _h2)];
         drop ["\a3\data_f\cl_water", "", "Billboard", 1, 7, _dpos, [0,0,-1], 1, 0.0000001, 0.000, 0.7, [0.07], [[1,1,1,0], [1,1,1,0.7], [1,1,1,0.7], [1,1,1,0.7]], [0,0], 0.2, 1.2, "", "", ""];
         _a = _a + 1;
     };
