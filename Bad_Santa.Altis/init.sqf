@@ -7,6 +7,21 @@ JK_count = 2;
 JK_playMusic = false;
 JK_maxCount = 250;
 JK_isInLoop = false;
+
+
+/*
+ * Author: joko // Jonas
+ * Fill Units Gear
+ *
+ * Arguments:
+ * 0: Unit that become the Weapons
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call JK_fnc_unitInit
+ */
 JK_fnc_unitInit = {
     params ["_unit"];
     _unit removeMagazines "xmas_explosive_present";
@@ -15,11 +30,39 @@ JK_fnc_unitInit = {
     _unit addMagazine ["xmas_explosive_present", 1];
 };
 
+/*
+ * Author: joko // Jonas
+ * Create a Unit with the Loadout
+ *
+ * Arguments:
+ * 0: Group in the the Unit Spawn <Group>
+ * 1: Classname of the Unit <String>
+ * 2: Position of where the Unit spawn <Array>
+ *
+ * Return Value:
+ * spawned Unit <Object>
+ *
+ * Example:
+ * [grpNull, "CABaseMan", getPos testObj] call JK_fnc_spawnUnits
+ */
 JK_fnc_spawnUnits = {
     params ["_group", "_className", "_position"];
     _className createUnit [_position, _group, "this call JK_fnc_unitInit", 0.9];
 };
 
+/*
+ * Author: joko // Jonas
+ * called in the Loop to Create the Groups
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call JK_fnc_loop
+ */
 JK_fnc_loop = {
     if (JK_isInLoop) exitWith {};
     if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {};
@@ -39,18 +82,19 @@ JK_fnc_loop = {
             _posWP = getMarkerPos _posWP;
             [_grp, _posWP, 50, "MOVE", "AWARE", "YELLOW", "FULL", "STAG COLUMN", "this spawn CBA_fnc_searchNearby", [3,6,9]] call CBA_fnc_addWaypoint;
         };
-        {
-            _x addCuratorEditableObjects [allUnits, true];
-            true
-        } count allCurators;
-        {
-            _x addCuratorEditableObjects [vehicles, true];
-            true
-        } count allCurators;
-        {
-            _x addCuratorEditableObjects [allDead, true];
-            true
-        } count allCurators;
+        if (isServer) then {
+            {
+                _x addCuratorEditableObjects [entities "", true];
+                true
+            } count allCurators;
+        } else {
+            [{
+                {
+                    _x addCuratorEditableObjects [entities "", true];
+                    true
+                } count allCurators;
+            }, "BIS_fnc_call", false, false, true] call BIS_fnc_MP;
+        };
         JK_isInLoop = false;
         if !(count (allUnits - allPlayers) >= JK_maxCount) then {
             JK_count = JK_count + 1;
