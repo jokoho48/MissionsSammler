@@ -24,6 +24,18 @@ class CfgSounds {
     };
 };
 
+CLib_Modules[] = {"CLib"};
+
+class CfgClibMissionModules {
+    tag = "JK";
+    class BadSanta {
+        class init;
+        class common;
+        class weather;
+        class clientInit;
+    };
+};
+
 corpseManagerMode = 1;
 corpseLimit = 10;
 corpseRemovalMinTime = 60;
