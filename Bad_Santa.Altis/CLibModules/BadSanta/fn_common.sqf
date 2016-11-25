@@ -88,12 +88,6 @@ JK_fnc_loop = {
 
 if (!isServer && !hasInterface) then {
     if ((paramsArray select 0) isEqualTo 1) then {
-        [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
+        call JK_fnc_loop;
     };
-};
-
-if (hasInterface) then {
-    ["XMas_PlayMusic", {
-        soundPoint say3D "Intro";
-    }] call CLib_fnc_addEventhandler;
 };

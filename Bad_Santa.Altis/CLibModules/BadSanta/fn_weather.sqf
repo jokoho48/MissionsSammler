@@ -32,7 +32,7 @@ if (hasInterface) then {
 };
 
 [{
-    100 setFog [0.08, 0.02, 120];
+    100 setFog  [0.4, 0.03, 100];
     100 setrain 0;
     100 setovercast 0.6;
     if (hasInterface) then {

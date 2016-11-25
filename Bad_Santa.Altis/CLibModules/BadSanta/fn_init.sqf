@@ -7,10 +7,29 @@ JK_count = 2;
 JK_playMusic = false;
 JK_maxCount = 250;
 JK_isInLoop = false;
+
+JK_fnc_playMusic = {
+    if (JK_playMusic) exitWith {};
+    "XMas_PlayMusic" call CLib_fnc_globalEvent;
+    JK_playMusic = true;
+    publicVariable "JK_playMusic";
+
+};
+
 soundPoint addAction ["Play Music", {
-    [{
-        if (JK_playMusic) exitWith {};
-        "" call CLib_fnc_globalEvent;
-    }] call CLib_fnc_mutex;
+    [JK_fnc_playMusic] call CLib_fnc_mutex;
 }];
+
+if (hasInterface) then {
+    ["XMas_PlayMusic", {
+        soundPoint say3D "Intro";
+    }] call CLib_fnc_addEventhandler;
+};
+
+if (isServer) then {
+    ["XMas_PlayMusic", {
+        JK_playMusic = false;
+        publicVariable "JK_playMusic";
+    }] call CLib_fnc_addEventhandler;
+};
 call JK_BadSanta_fnc_common;
