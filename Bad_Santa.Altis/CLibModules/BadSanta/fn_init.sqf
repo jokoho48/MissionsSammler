@@ -32,4 +32,3 @@ if (isServer) then {
         publicVariable "JK_playMusic";
     }] call CLib_fnc_addEventhandler;
 };
-call JK_BadSanta_fnc_common;

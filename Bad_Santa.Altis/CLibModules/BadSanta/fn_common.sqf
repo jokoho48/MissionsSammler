@@ -86,8 +86,6 @@ JK_fnc_loop = {
     };
 };
 
-if (!isServer && !hasInterface) then {
-    if ((paramsArray select 0) isEqualTo 1) then {
-        call JK_fnc_loop;
-    };
+if ((paramsArray select 0) isEqualTo 1) then {
+   call JK_fnc_loop;
 };

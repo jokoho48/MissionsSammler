@@ -33,6 +33,7 @@ class CfgClibMissionModules {
         class common;
         class weather;
         class clientInit;
+        class hcInit;
     };
 };
 
