@@ -55,7 +55,7 @@ JK_fnc_spawnUnits = {
 JK_fnc_loop = {
 
     if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {
-                [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
+        [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
     };
 
     0 spawn {

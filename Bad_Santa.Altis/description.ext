@@ -23,19 +23,21 @@ class CfgSounds {
         titles[] = {0,""};
     };
 };
+class CLib {
+    Modules[] = {"CLib"};
 
-CLib_Modules[] = {"CLib"};
-
-class CfgClibMissionModules {
-    tag = "JK";
-    class BadSanta {
-        class init;
-        class common;
-        class weather;
-        class clientInit;
-        class hcInit;
+    class CfgClibMissionModules {
+        tag = "BadSanta";
+        class BadSanta {
+            class init;
+            class common;
+            class weather;
+            class clientInit;
+            class hcInit;
+        };
     };
-};
+}
+
 
 corpseManagerMode = 1;
 corpseLimit = 10;
