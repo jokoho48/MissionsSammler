@@ -36,7 +36,7 @@ JK_fnc_unitInit = {
  */
 JK_fnc_spawnUnits = {
     params ["_group", "_className", "_position"];
-    _className createUnit [_position, _group, "this call JK_fnc_unitInit", 0.9];
+    _className createUnit [_position, _group, "this call JK_fnc_unitInit", 0.4];
 };
 
 /*

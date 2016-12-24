@@ -27,7 +27,7 @@ class CLib {
     Modules[] = {"CLib"};
 
     class CfgClibMissionModules {
-        tag = "BadSanta";
+        tag = "JK";
         class BadSanta {
             class init;
             class common;
@@ -36,7 +36,11 @@ class CLib {
             class hcInit;
         };
     };
-}
+    class GarbageCollector {
+        EnableGarbageCollector = 1;
+        GarbageCollectorTime = 120;
+    };
+};
 
 
 corpseManagerMode = 1;

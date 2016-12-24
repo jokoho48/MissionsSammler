@@ -8,7 +8,7 @@ JK_playMusic = true;
 JK_maxCount = 250;
 
 JK_fnc_playMusic = {
-    if (JK_playMusic) exitWith {};
+    if !(JK_playMusic) exitWith {};
     "XMas_PlayMusic" call CLib_fnc_globalEvent;
     JK_playMusic = true;
     publicVariable "JK_playMusic";
@@ -34,6 +34,6 @@ if (isServer) then {
         [{
             JK_playMusic = true;
             publicVariable "JK_playMusic";
-        }] call CLib_fnc_wait;
+        }, 150] call CLib_fnc_wait;
     }] call CLib_fnc_addEventhandler;
 };
