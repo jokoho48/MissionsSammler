@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=324;
+		nextID=330;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6408.4839,704.94348,14915.146};
-		dir[]={-0.17448734,-0.19850117,0.96446908};
-		up[]={-0.035340734,0.98010117,0.19534516};
-		aside[]={0.98405498,-5.0244853e-007,0.17803027};
+		pos[]={6247.7559,51.014572,16251.24};
+		dir[]={0.11766356,-0.32596925,0.9380722};
+		up[]={0.040572621,0.94537491,0.32346055};
+		aside[]={0.9922663,-1.8494029e-007,-0.12446251};
 	};
 };
 binarizationWanted=0;
@@ -632,8 +632,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6237.4917,43.001442,16257.188};
-						angles[]={0,0.024172969,0};
+						position[]={6237.4922,43.001438,16257.188};
+						angles[]={0,0.024172809,0};
 					};
 					side="West";
 					flags=4;
@@ -643,9 +643,31 @@ class Mission
 						description="Combat Medic | Rudolph";
 						isPlayable=1;
 					};
-					id=195;
-					type="B_medic_F";
-					atlOffset=3.8146973e-006;
+					id=324;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -726,26 +748,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6244.2739,43.001442,16273.2};
-						angles[]={0,3.1456807,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						description="Grenadier | Blitzen";
-						isPlayable=1;
-					};
-					id=200;
-					type="B_Soldier_GL_F";
-					atlOffset=3.8146973e-006;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={6247.4766,43.001442,16270.927};
 						angles[]={0,3.1456807,0};
 					};
@@ -761,7 +763,7 @@ class Mission
 					type="B_soldier_M_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -781,7 +783,7 @@ class Mission
 					type="B_Soldier_TL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -801,7 +803,7 @@ class Mission
 					type="B_soldier_AR_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -821,7 +823,7 @@ class Mission
 					type="B_Soldier_GL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -840,6 +842,48 @@ class Mission
 					id=205;
 					type="B_medic_F";
 					atlOffset=3.8146973e-006;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6244.2739,43.001438,16273.2};
+						angles[]={0,3.1456766,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Rifleman | Blitzen";
+						isPlayable=1;
+					};
+					id=327;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -920,26 +964,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6232.8398,43.001442,16273.192};
-						angles[]={0,3.1574557,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						description="Grenadier | Comet";
-						isPlayable=1;
-					};
-					id=210;
-					type="B_Soldier_GL_F";
-					atlOffset=3.8146973e-006;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={6237.6133,43.001442,16270.958};
 						angles[]={0,3.1574557,0};
 					};
@@ -955,7 +979,7 @@ class Mission
 					type="B_soldier_M_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -975,7 +999,7 @@ class Mission
 					type="B_Soldier_TL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -995,7 +1019,7 @@ class Mission
 					type="B_soldier_AR_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1015,7 +1039,7 @@ class Mission
 					type="B_Soldier_GL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1034,6 +1058,48 @@ class Mission
 					id=215;
 					type="B_medic_F";
 					atlOffset=3.8146973e-006;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6232.8398,43.001438,16273.192};
+						angles[]={0,3.1574576,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Rifleman | Comet";
+						isPlayable=1;
+					};
+					id=328;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -1114,26 +1180,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6255.8926,43.001442,16273.361};
-						angles[]={0,3.1372395,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						description="Grenadier | Dasher";
-						isPlayable=1;
-					};
-					id=220;
-					type="B_Soldier_GL_F";
-					atlOffset=3.8146973e-006;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={6254.3784,43.001442,16273.537};
 						angles[]={0,3.1372395,0};
 					};
@@ -1149,7 +1195,7 @@ class Mission
 					type="B_soldier_M_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1169,7 +1215,7 @@ class Mission
 					type="B_Soldier_TL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1189,7 +1235,7 @@ class Mission
 					type="B_soldier_AR_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1209,7 +1255,7 @@ class Mission
 					type="B_Soldier_GL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1228,6 +1274,48 @@ class Mission
 					id=225;
 					type="B_medic_F";
 					atlOffset=3.8146973e-006;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6255.8931,43.001438,16273.361};
+						angles[]={0,3.1372468,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Rifleman | Dasher";
+						isPlayable=1;
+					};
+					id=329;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -1308,26 +1396,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6245.1699,43.001442,16279.745};
-						angles[]={0,3.1214108,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						description="Grenadier | Donner";
-						isPlayable=1;
-					};
-					id=230;
-					type="B_Soldier_GL_F";
-					atlOffset=3.8146973e-006;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={6250.0483,43.001442,16281.958};
 						angles[]={0,3.1214108,0};
 					};
@@ -1343,7 +1411,7 @@ class Mission
 					type="B_soldier_M_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1363,7 +1431,7 @@ class Mission
 					type="B_Soldier_TL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1383,7 +1451,7 @@ class Mission
 					type="B_soldier_AR_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1403,7 +1471,7 @@ class Mission
 					type="B_Soldier_GL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1422,6 +1490,48 @@ class Mission
 					id=235;
 					type="B_medic_F";
 					atlOffset=3.8146973e-006;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6245.1699,43.001438,16279.745};
+						angles[]={0,3.1214166,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Rifleman | Donner";
+						isPlayable=1;
+					};
+					id=325;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -1502,26 +1612,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6237.1577,43.001442,16279.93};
-						angles[]={0,3.1334517,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						description="Grenadier | Prancer";
-						isPlayable=1;
-					};
-					id=240;
-					type="B_Soldier_GL_F";
-					atlOffset=3.8146973e-006;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={6241.9707,43.001442,16279.946};
 						angles[]={0,3.1334517,0};
 					};
@@ -1537,7 +1627,7 @@ class Mission
 					type="B_soldier_M_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1557,7 +1647,7 @@ class Mission
 					type="B_Soldier_TL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1577,7 +1667,7 @@ class Mission
 					type="B_soldier_AR_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1597,7 +1687,7 @@ class Mission
 					type="B_Soldier_GL_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1616,6 +1706,48 @@ class Mission
 					id=245;
 					type="B_medic_F";
 					atlOffset=3.8146973e-006;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6237.1582,43.001438,16279.93};
+						angles[]={0,3.1334593,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Rifleman | Prancer";
+						isPlayable=1;
+					};
+					id=326;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
