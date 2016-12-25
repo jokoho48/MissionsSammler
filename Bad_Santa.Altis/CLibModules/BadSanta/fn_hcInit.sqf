@@ -1,6 +1,6 @@
 call JK_BadSanta_fnc_common;
 
-BadSanta_Reveal_Statemachine = call CLib_fnc_addStatemachineState;
+BadSanta_Reveal_Statemachine = call CLib_fnc_createStatemachine;
 
 [BadSanta_Reveal_Statemachine, "init", {
     BadSanta_RevealUnitsData = +allPlayers;
