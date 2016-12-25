@@ -36,10 +36,12 @@ class CLib {
             class hcInit;
         };
     };
+
     class GarbageCollector {
         EnableGarbageCollector = 1;
         GarbageCollectorTime = 120;
     };
+
     class CfgCLibLoadouts {
 
         class BaseCollection {
