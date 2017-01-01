@@ -61,7 +61,7 @@ JK_fnc_loop = {
     0 spawn {
         for "_j" from 0 to JK_count step 1 do {
         if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {
-                    [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
+            [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
         };
             private _grp = createGroup EAST;
             private _pos = selectRandom JK_allSpawns;
@@ -87,5 +87,5 @@ JK_fnc_loop = {
 };
 
 if ((paramsArray select 0) isEqualTo 1) then {
-   call JK_fnc_loop;
+    [{call JK_fnc_loop}, 900] call CLib_fnc_wait;
 };

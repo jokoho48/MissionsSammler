@@ -120,6 +120,7 @@ class CLib {
             primaryWeaponLoadedMagazine[] = {"100Rnd_65x39_caseless_mag_Tracer"};
             primaryWeaponResting[] = {"bipod_01_F_snd"};
             magazines[] = {{"16Rnd_9x21_Mag",3},{"100Rnd_65x39_caseless_mag_Tracer",6}};
+            itemsBackpack[] = {{"ACE_SpareBarrel", 1}};
         };
 
         class B_Soldier_GL_F : RiflemanBackpack {
