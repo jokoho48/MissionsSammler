@@ -21,9 +21,6 @@ if (isServer) then {
 JK_fnc_playMusic = {
     if !(JK_playMusic) exitWith {};
     "XMas_PlayMusic" call CLib_fnc_globalEvent;
-    JK_playMusic = true;
-    publicVariable "JK_playMusic";
-
 };
 
 soundPoint addAction ["Play Music", {
@@ -34,7 +31,8 @@ soundPoint addAction ["Play Music", {
 
 if (hasInterface) then {
     ["XMas_PlayMusic", {
-        soundPoint say3D "Intro";
+        if !(JK_playMusic) exitWith {};
+        soundPoint say3D ["Intro", 5000];
     }] call CLib_fnc_addEventhandler;
 };
 
