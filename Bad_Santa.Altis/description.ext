@@ -24,7 +24,7 @@ class CfgSounds {
     };
 };
 class CLib {
-    Modules[] = {"CLib", "BSO/EarPlugs", "BSO/BFT_light", "BSO/Zeus", "BSO/ACRE"};
+    Modules[] = {"CLib"};
 
     class CfgClibMissionModules {
         tag = "JK";
@@ -156,6 +156,7 @@ wreckManagerMode = 1;
 wreckLimit = 5;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 900;
+
 class Params {
     class AISkill {
         title = "Mission"; // Param name visible in the list

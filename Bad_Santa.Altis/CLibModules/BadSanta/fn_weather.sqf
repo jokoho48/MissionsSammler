@@ -17,12 +17,12 @@
 "filmGrain" ppEffectAdjust [0.02, 1, 1, 0.1, 1, false];
 "filmGrain" ppEffectCommit 5;
 
-setviewdistance 1000;
+setViewDistance 1000;
 
 setObjectViewDistance [1000, 1000];
 
-0 setovercast 0.6;
-0 setrain 0;
+0 setOvercast 0.6;
+0 setRain 0;
 
 if (hasInterface) then {
     JK_hndl = ppEffectCreate ["colorCorrections", 1501];
@@ -33,8 +33,8 @@ if (hasInterface) then {
 
 [{
     100 setFog  [0.4, 0.03, 100];
-    100 setrain 0;
-    100 setovercast 0.6;
+    100 setRain 0;
+    100 setOvercast 0.6;
     if (hasInterface) then {
         JK_hndl ppEffectEnable true;
         JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];

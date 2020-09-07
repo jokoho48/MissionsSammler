@@ -7,7 +7,8 @@ if (isServer) then {
     JK_allWeapon = ["LMG_Zafir_F", "arifle_TRG21_F", "arifle_TRG20_F", "arifle_Mk20_F", "arifle_Mk20_plain_F", "arifle_Mk20C_F", "arifle_Mk20C_plain_F", "arifle_Katiba_F", "arifle_Katiba_C_F"];
     JK_count = 2;
     JK_playMusic = true;
-    JK_maxCount = 250;
+    JK_maxCount = 155;
+    JK_killed = 0;
 
     publicVariable "JK_allSpawns";
     publicVariable "JK_allWeapon";
@@ -15,6 +16,8 @@ if (isServer) then {
     publicVariable "JK_count";
     publicVariable "JK_playMusic";
     publicVariable "JK_maxCount";
+    publicVariable "JK_killed";
+
 };
 
 

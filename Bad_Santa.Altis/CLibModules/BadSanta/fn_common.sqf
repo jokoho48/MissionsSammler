@@ -17,6 +17,11 @@ JK_fnc_unitInit = {
     private _weapon = selectRandom JK_allWeapon;
     [_unit, _weapon, 8] call BIS_fnc_addWeapon;
     _unit addMagazine ["xmas_explosive_present", 1];
+    _unit addEventHandler ["Killed", {
+        JK_killed = JK_killed + 1;
+        publicVariable "JK_killed";
+        diag_log format ["Bad Santas Killed: %1", JK_killed];
+    }];
 };
 
 /*
@@ -60,18 +65,20 @@ JK_fnc_loop = {
 
     0 spawn {
         for "_j" from 0 to JK_count step 1 do {
-        if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {
-            [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
-        };
+            if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {
+                [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
+            };
             private _grp = createGroup EAST;
             private _pos = selectRandom JK_allSpawns;
             _pos = getMarkerPos _pos;
-            for "_i" from 0 to 5 step 1 do {
+            for "_i" from 0 to 3 + floor (random 4) step 1 do {
                 [_grp, "xmas_santa_opfor", _pos] call JK_fnc_spawnUnits;
+                sleep 1;
             };
             private _posWP = selectRandom JK_allTagets;
             _posWP = getMarkerPos _posWP;
             [_grp, _posWP, 50, "MOVE", "AWARE", "YELLOW", "FULL", "STAG COLUMN", "this spawn CBA_fnc_searchNearby", [3,6,9]] call CBA_fnc_addWaypoint;
+            sleep 5;
         };
 
         {
