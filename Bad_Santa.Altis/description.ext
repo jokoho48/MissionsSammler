@@ -166,3 +166,15 @@ class Params {
                // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
     };
 };
+class CfgDebriefing
+{
+    class XMAS_MissionFailed
+    {
+        title = "Mission Failed";
+        subtitle = "";
+        description = "Die Übermächtigen Weinachtman Kräfte haben unsere einheiten Total überrannt und haben unsere Wertvollste Resource eingenommen!";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+    };
+};

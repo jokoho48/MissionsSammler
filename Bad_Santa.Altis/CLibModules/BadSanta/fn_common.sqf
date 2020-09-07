@@ -58,14 +58,13 @@ JK_fnc_spawnUnits = {
  * [] call JK_fnc_loop
  */
 JK_fnc_loop = {
-
-    if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {
+    if (east countSide allUnits >= JK_maxCount) exitWith {
         [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
     };
 
     0 spawn {
         for "_j" from 0 to JK_count step 1 do {
-            if (count (allUnits - allPlayers) >= JK_maxCount) exitWith {
+            if ((east countSide allUnits) >= JK_maxCount) exitWith {
                 [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
             };
             private _grp = createGroup EAST;
@@ -85,7 +84,7 @@ JK_fnc_loop = {
             _x addCuratorEditableObjects [entities "", true];
             true
         } count allCurators;
-        if !(count (allUnits - allPlayers) >= JK_maxCount) then {
+        if !((east countSide allUnits) >= JK_maxCount) then {
             JK_count = JK_count + 1;
             publicVariable "JK_count";
         };

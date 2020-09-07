@@ -17,11 +17,9 @@
 "filmGrain" ppEffectAdjust [0.02, 1, 1, 0.1, 1, false];
 "filmGrain" ppEffectCommit 5;
 
-setViewDistance 1000;
+JK_OverCast = overcast;
 
-setObjectViewDistance [1000, 1000];
-
-0 setOvercast 0.6;
+0 setOvercast JK_OverCast;
 0 setRain 0;
 
 if (hasInterface) then {
@@ -31,51 +29,52 @@ if (hasInterface) then {
     JK_hndl ppEffectCommit 0;
 };
 
-[{
-    100 setFog  [0.4, 0.03, 100];
-    100 setRain 0;
-    100 setOvercast 0.6;
+JK_FogParams = fogparams;
+JK_BadSanta_fnc_UpdateWeatherAndPP = {
+    10 setFog JK_FogParams;
+    10 setRain 0;
+    10 setOvercast JK_OverCast;
     if (hasInterface) then {
         JK_hndl ppEffectEnable true;
         JK_hndl ppEffectAdjust [0.5, 0.7, 0.002, [0.1, .2, 2, 0.01], [.88, .88, 1, .45], [1.1 , 1.1, 1.1, 0.03]];
         JK_hndl ppEffectCommit 10;
+        if (isNull objectParent player) then {
+            playSound format ["wind%1", ceil random 5];
+        };
     };
-}, 10] call CLib_fnc_addPerFrameHandler;
-
+    [{call JK_BadSanta_fnc_UpdateWeatherAndPP}, 10] call CLib_fnc_wait;
+};
+call JK_BadSanta_fnc_UpdateWeatherAndPP;
 //--- Wind & Dust
 setWind [0.201112, 0.204166, true];
 if !(hasInterface) exitWith {};
-[{
-    private _obj = vehicle player;
-    if (_obj isEqualTo player) then {
-        playSound format ["wind%1", ceil random 5];
-    };
-    private _pos = position _obj;
+if (isNull objectParent player) then {
+    playSound format ["wind%1", ceil random 5];
+};
 
-    //--- Dust
-    private _velocity = [random 10, random 10, -1];
-    private _color = [1.0, 0.9, 0.8];
-    private _alpha = 0.02 + random 0.02;
-    private _ps = "#particlesource" createVehicleLocal _pos;
-    _ps setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 8], "", "Billboard", 1, 3, [0, 0, -6], _velocity, 1, 1.275, 1, 0, [9], [_color + [0], _color + [_alpha], _color + [0]], [1000], 1, 0, "", "", _obj];
-    _ps setParticleRandom [3, [30, 30, 0], [0, 0, 0], 1, 0, [0, 0, 0, 0.01], 0, 0];
-    _ps setParticleCircle [0.1, [0, 0, 0]];
-    _ps setDropInterval 0.002;
+//--- Dust
+private _velocity = [random 10, random 10, -1];
+private _color = [1.0, 0.9, 0.8];
+private _alpha = 0.02 + random 0.02;
+private _ps = "#particlesource" createVehicleLocal _pos;
+_ps setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 8], "", "Billboard", 1, 3, [0, 0, -6], _velocity, 1, 1.275, 1, 0, [9], [_color + [0], _color + [_alpha], _color + [0]], [1000], 1, 0, "", "", _obj];
+_ps setParticleRandom [3, [30, 30, 0], [0, 0, 0], 1, 0, [0, 0, 0, 0.01], 0, 0];
+_ps setParticleCircle [0.1, [0, 0, 0]];
+_ps setDropInterval 0.002;
 
-    [{deletevehicle _this;}, random 2 + 0.5, _ps] call CLib_fnc_wait;
+JK_BadSanta_fnc_UpdateFogParticles = {
+    params ["_ps"];
+    _ps setPos (getPos player);
+    [{_this call JK_BadSanta_fnc_UpdateFogParticles}, _ps] call CLib_fnc_wait;
+};
 
-}, 25] call CLib_fnc_addPerFrameHandler;
+_ps call JK_BadSanta_fnc_UpdateFogParticles;
 
 //Snow script
 private _obj = player;
 
-private _pos = position (vehicle _obj);
+private _pos = getPos (vehicle _obj);
 _pos set [2, 0];
-#define __D 15
-#define __H0 30
-#define __H1 8
-#define __H2 4
-#define DENSITY 20000
 
 JK_Weather_fog1 = "#particlesource" createVehicleLocal _pos;
 JK_Weather_fog1 setParticleParams [
@@ -106,46 +105,43 @@ JK_Weather_fog3 setParticleParams [
 JK_Weather_fog3 setParticleRandom [3, [55, 55, 0.2], [0, 0, -0.1], 2, 0.45, [0, 0, 0, 0.1], 0, 0];
 JK_Weather_fog3 setParticleCircle [0.001, [0, 0, -0.12]];
 JK_Weather_fog3 setDropInterval 0.002;
-0 spawn {
-    while {true} do {
-        private _pos = getPos player;
-        _pos set [2, 0];
-        JK_Weather_fog1 setpos _pos;
-        JK_Weather_fog2 setpos _pos;
-        JK_Weather_fog3 setpos _pos;
-        for "_i" from 0 to DENSITY do {
-            private _pos = getPosATL player;
-            _pos params ["_posX", "_posY", "_posZ"];
-            private _playerVelocity = (velocity (vehicle player)) select 0;
-            {
-                private _dpos = [
-                    (_posX + (__D - (random (2*__D))) + (_playerVelocity * 1)),
-                    (_posY + (__D - (random (2*__D))) + (_playerVelocity * 1)),
-                    (_posZ + _x)
-                ];
-                drop [
-                    "\a3\data_f\cl_water",
-                    "",
-                    "Billboard",
-                    1, 7,
-                    _dpos,
-                    [0,0,-1],
-                    1, 0.0000001,
-                    0.000, 0.7,
-                    [0.07],
-                    [
-                        [1,1,1,0],
-                        [1,1,1,0.7],
-                        [1,1,1,0.7],
-                        [1,1,1,0.7]
-                    ],
-                    [0,0],
-                    0.2, 1.2,
-                    "", "", ""
-                ];
-                nil
-            } count [__H0, __H1, __H2];
-        };
-        sleep 1;
+
+JK_Distance = 15;
+JK_Height = 5;
+JK_Density = 144;
+
+[{
+    private _pos = getPosATL player;
+    _pos params ["_posX", "_posY", "_posZ"];
+    private _playerVelocity = (velocity (vehicle player));
+    for "_i" from 0 to JK_Density do {
+        private _dpos = [
+            (_posX + (JK_Distance - (random (2 * JK_Distance))) + (_playerVelocity select 0)),
+            (_posY + (JK_Distance - (random (2 * JK_Distance))) + (_playerVelocity select 1)),
+            (_posZ + JK_Height)
+        ];
+        drop [
+            "\a3\data_f\cl_water",
+            "",
+            "Billboard",
+            1, 15,
+            _dpos,
+            [0,0,-1],
+            1, 0.0000001,
+            0.000, 0.7,
+            [0.07],
+            [
+                [1,1,1,0],
+                [1,1,1,0.7],
+                [1,1,1,0.7],
+                [1,1,1,0.7]
+            ],
+            [0,0],
+            0.2, 1.2,
+            "", "", ""
+        ];
     };
-};
+    JK_Weather_fog1 setPos _pos;
+    JK_Weather_fog2 setPos _pos;
+    JK_Weather_fog3 setPos _pos;
+}, 0] call CLib_fnc_addPerframeHandler;

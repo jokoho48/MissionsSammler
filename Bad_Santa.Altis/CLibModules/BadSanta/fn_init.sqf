@@ -32,6 +32,10 @@ soundPoint addAction ["Play Music", {
     };
 }];
 
+["XMas_PlayMusic", {
+    ["fail", false, true, true] call BIS_fnc_EndMission;
+}] call CLib_fnc_addEventhandler;
+
 if (hasInterface) then {
     ["XMas_PlayMusic", {
         if !(JK_playMusic) exitWith {};
