@@ -1,0 +1,168 @@
+author="joko // Jonas";
+OnLoadName = "";
+OnLoadMission = "";
+enableDebugConsole = 1;
+respawnDialog = 0;
+respawn = "BASE";
+respawndelay = 20;
+disabledAI = 1;
+
+class Header {
+    gameType = "coop";
+    minPlayers = "2";
+    maxPlayers = "80";
+};
+
+OnLoadMissionTime = true;
+
+class CfgSounds {
+    sounds[] = {"Intro"};
+    class Intro {
+        name = "Intro";
+        sound[] = {"\music\JingleBells.ogg", 0.8, 1};
+        titles[] = {0, ""};
+    };
+};
+class CLib {
+    Modules[] = {"CLib"};
+
+    class CfgClibMissionModules {
+        tag = "JK";
+        class BadSanta {
+            class init;
+            class common;
+            class weather;
+            class clientInit;
+            class hcInit;
+        };
+    };
+
+    class GarbageCollector {
+        EnableGarbageCollector = 1;
+        GarbageCollectorTime = 120;
+    };
+
+    class CfgCLibLoadouts {
+
+        class BaseCollection {
+            uniform[] = {};
+            vest[] = {};
+            headgear[] = {};
+            goggle[] = {};
+            backpack[] = {};
+            primaryWeapon[] = {};
+            primaryWeaponOptic[] = {};
+            primaryWeaponMuzzle[] = {};
+            primaryWeaponBarrel[] = {};
+            primaryWeaponResting[] = {};
+            primaryWeaponLoadedMagazine[] = {};
+            secondaryWeapon[] = {};
+            secondaryWeaponOptic[] = {};
+            secondaryWeaponMuzzle[] = {};
+            secondaryWeaponBarrel[] = {};
+            secondaryWeaponResting[] = {};
+            secondaryWeaponLoadedMagazine[] = {};
+            handgun[] = {};
+            handgunOptic[] = {};
+            handgunMuzzle[] = {};
+            handgunBarrel[] = {};
+            handgunResting[] = {};
+            handgunLoadedMagazine[] = {};
+            binocular[] = {};
+            magazines[] = {};
+            items[] = {};
+            itemsUniform[] = {};
+            itemsVest[] = {};
+            itemsBackpack[] = {};
+            linkedItems[] = {};
+            script[] = {};
+            removeAllWeapons = 0;
+            removeAllItems = 0;
+            removeAllAssingedItems = 0;
+        };
+
+        class B_Soldier_F : BaseCollection {
+            uniform[] = {"U_B_CombatUniform_mcam"};
+            vest[] = {"V_PlateCarrier1_rgr"};
+            headgear[] = {"H_HelmetB_camo"};
+            primaryWeapon[] = {"arifle_MX_F"};
+            primaryWeaponOptic[] = {"optic_Hamr"};
+            primaryWeaponLoadedMagazine[] = {"30Rnd_65x39_caseless_mag_Tracer"};
+            handgun[] = {"hgun_P07_F"};
+            handgunLoadedMagazine[] = {"16Rnd_9x21_Mag"};
+            magazines[] = {{"16Rnd_9x21_Mag",3}, {"30Rnd_65x39_caseless_mag_Tracer",8}};
+            items[] = {{"ACE_EarPlugs", 1}, {"ACE_fieldDressing", 15}, {"ACE_morphine", 2}, {"SmokeShellGreen", 1}, {"SmokeShellRed", 1}, {"MiniGrenade", 2}, {"ACRE_ANPRC343", 1}};
+            linkedItems[] = {"ItemWatch", "ItemCompass"};
+            removeAllAssingedItems = 1;
+        };
+
+        class B_Soldier_TL_F : B_Soldier_F {
+            binocular[] = {"Binocular"};
+            items[] = {{"ACE_EarPlugs", 1}, {"ACE_fieldDressing", 15}, {"ACE_morphine", 2}, {"SmokeShellGreen", 1}, {"SmokeShellRed", 1}, {"MiniGrenade", 2}, {"ACRE_ANPRC343", 1}, {"ACRE_ANPRC152", 1}};
+            linkedItems[] = {"ItemMap", "ItemCompass", "ItemGPS"};
+        };
+
+        class B_Soldier_SL_F : B_Soldier_F {
+            binocular[] = {"ACE_VectorDay"};
+            linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS"};
+            items[] = {{"ACE_EarPlugs", 1}, {"ACE_fieldDressing", 15}, {"ACE_morphine", 2}, {"SmokeShellGreen", 1}, {"SmokeShellRed", 1}, {"MiniGrenade", 2}, {"ACRE_ANPRC343", 1}, {"ACRE_ANPRC152", 1}};
+        };
+
+        class B_officer_F : B_Soldier_SL_F {
+            headgear[] = {"H_Beret_02"};
+        };
+
+        class RiflemanBackpack : B_Soldier_F {
+            backpack[] = {"B_AssaultPack_rgr"};
+        };
+
+        class B_soldier_AR_F : RiflemanBackpack {
+            primaryWeapon[] = {"arifle_MX_SW_F"};
+            primaryWeaponOptic[] = {"optic_MRCO"};
+            primaryWeaponLoadedMagazine[] = {"100Rnd_65x39_caseless_mag_Tracer"};
+            primaryWeaponResting[] = {"bipod_01_F_snd"};
+            magazines[] = {{"16Rnd_9x21_Mag",3}, {"100Rnd_65x39_caseless_mag_Tracer",6}};
+            itemsBackpack[] = {{"ACE_SpareBarrel", 1}};
+        };
+
+        class B_Soldier_GL_F : RiflemanBackpack {
+            primaryWeapon[] = {"arifle_MX_GL_F"};
+            magazines[] = {{"16Rnd_9x21_Mag",3}, {"30Rnd_65x39_caseless_mag",8}, {"1Rnd_HE_Grenade_shell",15}};
+        };
+
+        class B_medic_F : RiflemanBackpack {
+            itemsBackpack[] = {{"ACE_fieldDressing", 50}, {"ACE_morphine", 15}, {"ACE_bloodIV",15}, {"ACE_epinephrine",10}};
+        };
+
+        class B_Survivor_F : B_medic_F {
+            linkedItems[] = {"ItemMap", "ItemCompass", "ItemGPS"};
+        };
+
+        class B_soldier_M_F : B_Soldier_F {
+            primaryWeapon[] = {"arifle_MXM_F"};
+            primaryWeaponOptic[] = {"optic_AMS_snd"};
+            primaryWeaponResting[] = {"bipod_01_F_snd"};
+        };
+    };
+};
+
+
+corpseManagerMode = 1;
+corpseLimit = 10;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 600;
+
+wreckManagerMode = 1;
+wreckLimit = 5;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 900;
+
+class Params {
+    class AISkill {
+        title = "Mission"; // Param name visible in the list
+        values[] = {0, 1}; // Values; must be integers; has to have the same number of elements as 'texts'
+        texts[] = {"TechCheck", "Mission"}; // Description of each selectable item
+        default = 0; // Default value; must be listed in 'values' array, otherwise 0 is used
+               // Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
+    };
+};
