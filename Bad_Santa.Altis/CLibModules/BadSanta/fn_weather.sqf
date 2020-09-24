@@ -108,13 +108,13 @@ JK_Weather_fog3 setDropInterval 0.002;
 
 JK_Distance = 15;
 JK_Height = 5;
-JK_Density = 144;
+JK_Density = 6000;
 
 [{
     private _pos = getPosATL player;
     _pos params ["_posX", "_posY", "_posZ"];
     private _playerVelocity = (velocity (vehicle player));
-    for "_i" from 0 to JK_Density do {
+    for "_i" from 0 to JK_Density/diag_fps do {
         private _dpos = [
             (_posX + (JK_Distance - (random (2 * JK_Distance))) + (_playerVelocity select 0)),
             (_posY + (JK_Distance - (random (2 * JK_Distance))) + (_playerVelocity select 1)),

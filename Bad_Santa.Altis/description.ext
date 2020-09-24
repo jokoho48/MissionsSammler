@@ -23,6 +23,15 @@ class CfgSounds {
         titles[] = {0, ""};
     };
 };
+
+class BadSanta {
+    spawns[] = {"spawn_1", "spawn_2", "spawn_3", "spawn_4", "spawn_5", "spawn_6", "spawn_7", "spawn_8"};
+    targets[] = {"target_1", "target_2", "target_3", "target_4", "target_5"};
+    weapons[] = {"LMG_Zafir_F", "arifle_TRG21_F", "arifle_TRG20_F", "arifle_Mk20_F", "arifle_Mk20_plain_F", "arifle_Mk20C_F", "arifle_Mk20C_plain_F", "arifle_Katiba_F", "arifle_Katiba_C_F"};
+    startGroupCount = 2;
+    maxCount = 155;
+};
+
 class CLib {
     Modules[] = {"CLib"};
 

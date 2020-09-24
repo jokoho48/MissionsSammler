@@ -2,12 +2,15 @@ setViewDistance 500;
 setObjectViewDistance 500;
 enableSaving [false, false];
 if (isServer) then {
-    JK_allSpawns = ["spawn_1", "spawn_2", "spawn_3", "spawn_4", "spawn_5", "spawn_6", "spawn_7", "spawn_8"];
-    JK_allTagets = ["target_1", "target_2", "target_3", "target_4", "target_5", "target_6"];
-    JK_allWeapon = ["LMG_Zafir_F", "arifle_TRG21_F", "arifle_TRG20_F", "arifle_Mk20_F", "arifle_Mk20_plain_F", "arifle_Mk20C_F", "arifle_Mk20C_plain_F", "arifle_Katiba_F", "arifle_Katiba_C_F"];
+    JK_allSpawns = getArray (missionConfigFile >> "BadSanta" >> "spawns");
+    JK_allTagets = getArray (missionConfigFile >> "BadSanta" >> "targets");
+    JK_allWeapon = getArray (missionConfigFile >> "BadSata" >> "weapons");
+    JK_count = getNumber (missionConfigFile >> "BadSata" >> "startGroupCount");
+    JK_maxCount = getNumber (missionConfigFile >> "BadSata" >> "maxCount");
+
     JK_count = 2;
-    JK_playMusic = true;
     JK_maxCount = 155;
+    JK_playMusic = true;
     JK_killed = 0;
 
     publicVariable "JK_allSpawns";
