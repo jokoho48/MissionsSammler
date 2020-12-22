@@ -1,7 +1,7 @@
 author="joko // Jonas";
 OnLoadName = "";
 OnLoadMission = "";
-enableDebugConsole = 1;
+enableDebugConsole[] = { "76561198113662885", "76561198068361983" , "76561198024742337" , "76561198056936198" };
 respawnDialog = 0;
 respawn = "BASE";
 respawndelay = 20;
