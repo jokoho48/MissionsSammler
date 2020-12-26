@@ -67,7 +67,7 @@ JK_fnc_loop = {
             if ((east countSide allUnits) >= JK_maxCount) exitWith {
                 [{call JK_fnc_loop}, (400 + random 200)] call CLib_fnc_wait;
             };
-            private _grp = createGroup EAST;
+            private _grp = createGroup [EAST, true];
             private _pos = selectRandom JK_allSpawns;
             _pos = getMarkerPos _pos;
             for "_i" from 0 to 3 + floor (random 4) step 1 do {

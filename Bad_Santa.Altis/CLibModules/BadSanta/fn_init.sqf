@@ -35,8 +35,17 @@ soundPoint addAction ["Play Music", {
     };
 }];
 
-["XMas_PlayMusic", {
-    ["fail", false, true, true] call BIS_fnc_EndMission;
+["JK_EndMission", {
+    if (JK_playMusic) then {
+        [JK_fnc_playMusic] call CLib_fnc_mutex;
+    };
+    [{
+        [{
+            JK_playMusic = false;
+            publicVariable "JK_playMusic";
+            ["fail", false, true, true] call BIS_fnc_EndMission;
+        }, {JK_playMusic}] call CLib_fnc_waitAndExecute;
+    }, 140] call CLib_fnc_wait;
 }] call CLib_fnc_addEventhandler;
 
 if (hasInterface) then {
